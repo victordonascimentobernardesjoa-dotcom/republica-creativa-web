@@ -5,7 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* ESTILOS GERAIS */
 body {
     background-color: #f0f4f8;
     max-width: 1200px;
@@ -16,7 +15,7 @@ body {
 header {
     background-color: #2b6cb0;
     color: white;
-    padding: 30px 20px;
+    padding: 40px 20px;
     text-align: center;
     border-radius: 8px;
     margin-bottom: 30px;
@@ -26,13 +25,14 @@ header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     margin-bottom: 20px;
 }
 
 header nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
     padding: 8px 15px;
     border-radius: 4px;
 }
@@ -41,17 +41,26 @@ header nav a:hover {
     background-color: #1a4a7a;
 }
 
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
 
-/* BOTÕES UNIFORMES */
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* BOTÕES UNIFORMES E COMPACTOS */
 .btn-principal, .btn-secundario {
     width: 100%;
-    max-width: 220px;
-    padding: 14px 0;
-    border: none;
+    max-width: 180px; /* Tamanho padrão para todos */
+    padding: 10px 0;
     border-radius: 6px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
+    border: none;
     cursor: pointer;
 }
 
@@ -73,8 +82,7 @@ header nav a:hover {
     background-color: #1a4a7a;
 }
 
-
-/* SEÇÕES E CARDS */
+/* SEÇÕES */
 section {
     background-color: white;
     padding: 30px;
@@ -85,39 +93,44 @@ section {
 
 section h2 {
     color: #2b6cb0;
-    margin-bottom: 20px;
     font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
+section h3 {
+    color: #1a4a7a;
+    font-size: 1.3rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* CARDS DE PROJETOS */
 .projeto-card {
     background-color: #f8fafc;
-    padding: 20px;
+    border: 1px solid #e2e8f0;
     border-radius: 6px;
+    padding: 20px;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.projeto-card button {
-    margin-top: 10px;
+.projeto-card img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
 }
 
+/* AJUSTE PARA TODOS OS BOTÕES FICAREM DO MESMO TAMANHO */
+.btn-principal, .btn-secundario,
+section .btn-principal, section .btn-secundario {
+    max-width: 180px;
+    margin: 10px auto 0; /* Centraliza e adiciona margem superior */
+}
 
-/* AJUSTES RESPONSIVOS */
+/* RESPONSIVIDADE */
 @media (max-width: 600px) {
     header nav ul {
         flex-direction: column;
         gap: 10px;
     }
-    
-    .btn-principal, .btn-secundario {
-        max-width: 180px;
-        margin: 0 auto;
-        display: block;
-    }
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #555;
 }
