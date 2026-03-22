@@ -12,7 +12,6 @@ body {
     padding: 20px;
 }
 
-/* CABEÇALHO */
 header {
     background-color: #2b6cb0;
     color: white;
@@ -47,16 +46,10 @@ header h1 {
     margin-bottom: 15px;
 }
 
-header p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* BOTÃO */
 .btn-principal {
-    background-color: #1a4a7a !important;
-    color: white !important;
-    text-decoration: none !important;
+    background-color: #1a4a7a;
+    color: white;
+    text-decoration: none;
     padding: 12px 25px;
     border-radius: 6px;
     font-weight: bold;
@@ -65,10 +58,9 @@ header p {
 }
 
 .btn-principal:hover {
-    background-color: #0f355c !important;
+    background-color: #0f355c;
 }
 
-/* SEÇÕES */
 section {
     background-color: white;
     padding: 30px;
@@ -90,39 +82,67 @@ section h3 {
     margin-bottom: 10px;
 }
 
-section p, section li {
-    line-height: 1.6;
-    font-size: 1.05rem;
+/* CARDS DE PROJETOS */
+.projeto-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-section ul {
-    margin-left: 25px;
+.projeto-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 4px;
     margin-bottom: 15px;
 }
 
-/* FORMULÁRIO */
-form {
+.btn-secundario {
+    background-color: #2b6cb0;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secundario:hover {
+    background-color: #1a4a7a;
+}
+
+/* FERRAMENTA DE BANDEIRA */
+.ferramenta-bandeira {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.canvas-bandeira {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #2b6cb0;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.controles-bandeira {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    flex: 1;
+    min-width: 250px;
 }
 
-form label {
-    font-weight: bold;
-    color: #1a4a7a;
-}
-
-form input, form select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-/* RODAPÉ */
 footer {
     text-align: center;
-    margin-top: 30px;
     padding: 20px;
     color: #555;
 }
