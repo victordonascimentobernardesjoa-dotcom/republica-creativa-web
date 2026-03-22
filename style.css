@@ -68,23 +68,46 @@ h2 {
     margin-top: 0;
     font-size: 1.8rem;
     color: #2b6cb0;
+    margin-bottom: 20px;
 }
 
-/* Estilos para parágrafos */
+h3 {
+    color: #1a4a7a;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* Estilos para parágrafos e listas */
 p {
     line-height: 1.6;
     margin-bottom: 15px;
+    font-size: 1.05rem;
 }
 
 header p {
     font-size: 1.2em;
     color: #e2e8f0;
+    margin-top: 15px;
 }
 
-/* Estilos da seção Sobre */
+section ul {
+    margin-left: 25px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Estilos das seções */
 section {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+/* Ajuste para rolagem suave e alinhamento */
+html {
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 20px;
 }
