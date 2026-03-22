@@ -41,31 +41,38 @@
         <h2>Ideologias Disponíveis</h2>
         
         <div class="ideologia-card">
-            <h3>Ideologias Reais</h3>
+            <h3>Ideologias Políticas Reais</h3>
             <ul>
-                <li><strong>Capitalismo</strong> — Foco em mercado livre e propriedade privada</li>
-                <li><strong>Socialismo</strong> — Distribuição equitativa de recursos e serviços públicos</li>
-                <li><strong>Comunismo</strong> — Classe trabalhadora como governante, sem propriedade privada</li>
-                <li><strong>Monarquia</strong> — Governo liderado por rei/rainha (constitucional ou absoluta)</li>
-                <li><strong>Ditadura Militar</strong> — Governo controlado pelas forças armadas</li>
-                <li><strong>Anarquismo</strong> — Ausência de estado ou governo centralizado</li>
-                <li><strong>Fascismo</strong> — Nacionalismo extremo, autoritarismo e hierarquia</li>
-                <li><strong>Liberalismo</strong> — Liberdades individuais, estado mínimo e democracia</li>
-                <li><strong>Conservadorismo</strong> — Manutenção de valores tradicionais e ordem social</li>
-                <li><strong>Progressismo</strong> — Mudanças sociais e políticas para igualdade</li>
-                <li><strong>Teocracia</strong> — Governo liderado por autoridades religiosas</li>
-                <li><strong>Colonialismo</strong> — Expansão territorial e domínio sobre outros povos</li>
+                <li><strong>Capitalismo</strong> — Foco em mercado livre, propriedade privada e concorrência</li>
+                <li><strong>Socialismo</strong> — Distribuição equitativa de recursos, serviços públicos e igualdade</li>
+                <li><strong>Comunismo</strong> — Classe trabalhadora governante, propriedade coletiva e fim das classes</li>
+                <li><strong>Monarquia</strong> — Liderança hereditária (absoluta ou constitucional)</li>
+                <li><strong>Ditadura Militar</strong> — Governo controlado pelas forças armadas, restrição de liberdades</li>
+                <li><strong>Anarquismo</strong> — Ausência de estado, organização baseada em cooperação voluntária</li>
+                <li><strong>Fascismo</strong> — Nacionalismo extremo, autoritarismo, hierarquia e militarismo</li>
+                <li><strong>Liberalismo</strong> — Liberdades individuais, estado mínimo e democracia representativa</li>
+                <li><strong>Conservadorismo</strong> — Manutenção de valores tradicionais, ordem social e religião</li>
+                <li><strong>Progressismo</strong> — Mudanças sociais, igualdade de gênero/orientação e direitos humanos</li>
+                <li><strong>Teocracia</strong> — Governo liderado por autoridades religiosas, leis baseadas em dogmas</li>
+                <li><strong>Colonialismo</strong> — Expansão territorial, domínio sobre outros povos e exploração de recursos</li>
+                <li><strong>Imperialismo</strong> — Expansão econômica e política, domínio sobre outros países</li>
+                <li><strong>Populismo</strong> — Apoio ao povo contra elites, discurso emocional e simplificado</li>
+                <li><strong>Nacionalismo</strong> — Prioridade aos interesses da nação, identidade coletiva forte</li>
+                <li><strong>Internacionalismo</strong> — Cooperação entre países, valorização da comunidade global</li>
+                <li><strong>Ecologismo Político</strong> — Proteção do meio ambiente como prioridade máxima</li>
+                <li><strong>Meritocracia</strong> — Cargos e benefícios atribuídos por mérito e capacidade</li>
             </ul>
         </div>
 
         <div class="ideologia-card">
             <h3>Ideologias Fictícias Exemplos</h3>
             <ul>
-                <li><strong>Technocracia Universal</strong> — Governo liderado por cientistas e tecnólogos</li>
-                <li><strong>Ecologismo Profundo</strong> — Sobrevivência do planeta acima de tudo</li>
-                <li><strong>Meritocracia Estruturada</strong> — Cargos atribuídos apenas por mérito</li>
-                <li><strong>Comunhão Tribal Moderna</strong> — Organização baseada em clãs com tecnologia avançada</li>
-                <li><strong>Utopianismo Racional</strong> — Sociedade organizada por lógica pura, sem emoções</li>
+                <li><strong>Technocracia Universal</strong> — Governo liderado por cientistas e tecnólogos, decisões baseadas em dados</li>
+                <li><strong>Ecologismo Profundo</strong> — Sobrevivência do planeta acima de tudo, sociedade em harmonia com a natureza</li>
+                <li><strong>Comunhão Tribal Moderna</strong> — Organização por clãs, tecnologia avançada combinada com tradições</li>
+                <li><strong>Utopianismo Racional</strong> — Sociedade organizada por lógica pura, sem influência de emoções</li>
+                <li><strong>Transumanismo Político</strong> — Melhoria humana por tecnologia, fusão homem-máquina</li>
+                <li><strong>Neofeudalismo</strong> — Estrutura feudal adaptada ao mundo moderno, poder em mãos de corporações</li>
             </ul>
             <p>Você pode criar sua própria ideologia personalizada no cadastro!</p>
         </div>
@@ -78,16 +85,16 @@
             <div class="opcao">
                 <h3>Criar Bandeira no Site</h3>
                 <div class="ferramenta-bandeira">
-                    <div id="canvas-container"></div>
+                    <canvas id="canvas-bandeira" width="200" height="120"></canvas>
                     <div class="controles">
                         <label>Cor de Fundo:</label>
-                        <input type="color" id="cor-fundo">
+                        <input type="color" id="cor-fundo" value="#ffffff">
                         
                         <label>Cor do Símbolo:</label>
-                        <input type="color" id="cor-simbolo">
+                        <input type="color" id="cor-simbolo" value="#000000">
                         
-                        <label>Símbolo:</label>
-                        <select id="simbolo">
+                        <label>Escolha o Símbolo:</label>
+                        <select id="tipo-simbolo">
                             <option value="estrela">Estrela</option>
                             <option value="cruz">Cruz</option>
                             <option value="sol">Sol</option>
@@ -108,7 +115,16 @@
                         <label>Quantidade de Símbolos:</label>
                         <input type="number" id="qtd-simbolo" min="1" max="10" value="1">
                         
-                        <button class="btn-principal">Salvar Bandeira</button>
+                        <label>Posição dos Símbolos:</label>
+                        <select id="posicao-simbolo">
+                            <option value="centro">Centro</option>
+                            <option value="linha-horizontal">Linha Horizontal</option>
+                            <option value="linha-vertical">Linha Vertical</option>
+                            <option value="grade">Grade</option>
+                        </select>
+                        
+                        <button id="btn-desenhar" class="btn-principal">Desenhar Bandeira</button>
+                        <button id="btn-salvar" class="btn-principal">Salvar Bandeira</button>
                     </div>
                 </div>
             </div>
@@ -118,8 +134,8 @@
                 <p>Envie seu arquivo PNG ou JPG (tamanho máximo: 5MB):</p>
                 <input type="file" id="upload-bandeira" accept="image/png, image/jpeg">
                 <p>Pré-visualização:</p>
-                <div id="preview-bandeira"></div>
-                <button class="btn-principal">Confirmar Importação</button>
+                <div id="preview-bandeira">Nenhuma imagem selecionada</div>
+                <button id="btn-confirmar-upload" class="btn-principal">Confirmar Importação</button>
             </div>
         </div>
     </section>
@@ -128,21 +144,21 @@
         <h2>Projetos Exemplos</h2>
         
         <div class="projeto-card">
-            <img src="https://via.placeholder.com/200x100?text=Bandeira+Valdris" alt="Bandeira do Império de Valdris">
+            <img src="https://via.placeholder.com/200x120?text=Bandeira+Valdris" alt="Bandeira do Império de Valdris">
             <h3>Império de Valdris</h3>
             <p>Ideologia: Monarquia Constitucional</p>
             <button class="btn-secundario">Ver Detalhes</button>
         </div>
         
         <div class="projeto-card">
-            <img src="https://via.placeholder.com/200x100?text=Bandeira+Auroria" alt="Bandeira da República Socialista de Auroria">
+            <img src="https://via.placeholder.com/200x120?text=Bandeira+Auroria" alt="Bandeira da República Socialista de Auroria">
             <h3>República Socialista de Auroria</h3>
             <p>Ideologia: Socialismo Democrático</p>
             <button class="btn-secundario">Ver Detalhes</button>
         </div>
         
         <div class="projeto-card">
-            <img src="https://via.placeholder.com/200x100?text=Bandeira+Kharos" alt="Bandeira do Estado de Kharos">
+            <img src="https://via.placeholder.com/200x120?text=Bandeira+Kharos" alt="Bandeira do Estado de Kharos">
             <h3>Estado de Kharos</h3>
             <p>Ideologia: Technocracia Universal (fictícia)</p>
             <button class="btn-secundario">Ver Detalhes</button>
@@ -171,20 +187,27 @@
                 <option value="progressismo">Progressismo</option>
                 <option value="teocracia">Teocracia</option>
                 <option value="colonialismo">Colonialismo</option>
+                <option value="imperialismo">Imperialismo</option>
+                <option value="populismo">Populismo</option>
+                <option value="nacionalismo">Nacionalismo</option>
+                <option value="internacionalismo">Internacionalismo</option>
+                <option value="ecologismo-politico">Ecologismo Político</option>
+                <option value="meritocracia">Meritocracia</option>
                 <!-- IDEOLOGIAS FICTÍCIAS -->
                 <option value="technocracia-universal">Technocracia Universal</option>
                 <option value="ecologismo-profundo">Ecologismo Profundo</option>
-                <option value="meritocracia-estruturada">Meritocracia Estruturada</option>
                 <option value="comunhao-tribal">Comunhão Tribal Moderna</option>
                 <option value="utopianismo-racional">Utopianismo Racional</option>
+                <option value="transumanismo-politico">Transumanismo Político</option>
+                <option value="neofeudalismo">Neofeudalismo</option>
                 <option value="propria">Criar Minha Própria Ideologia</option>
             </select>
             
             <label id="label-ideologia-propria" style="display: none;">Descreva Sua Ideologia:</label>
-            <textarea id="ideologia-propria" style="display: none;" rows="3" placeholder="Explique os princípios da sua ideologia..."></textarea>
+            <textarea id="ideologia-propria" style="display: none;" rows="4" placeholder="Explique os princípios, valores e funcionamento da sua ideologia..."></textarea>
             
             <label>Bandeira da Nação:</label>
-            <p>Escolha entre criar no site ou importar (acima) ou faça upload aqui:</p>
+            <p>Escolha entre criar no site (acima) ou faça upload aqui:</p>
             <input type="file" id="bandeira-cadastro" accept="image/png, image/jpeg">
             
             <label>Email:</label>
