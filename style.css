@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
@@ -22,6 +22,26 @@ header {
     margin-bottom: 30px;
 }
 
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+header nav a:hover {
+    background-color: #1a4a7a;
+}
+
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 15px;
@@ -32,39 +52,20 @@ header p {
     margin-bottom: 20px;
 }
 
-/* BOTÃO PRINCIPAL */
+/* BOTÃO */
 .btn-principal {
-    background-color: #1a4a7a;
-    color: white;
-    text-decoration: none;
+    background-color: #1a4a7a !important;
+    color: white !important;
+    text-decoration: none !important;
     padding: 12px 25px;
     border-radius: 6px;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-principal:hover {
-    background-color: #0f355c;
-}
-
-/* MENU */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 4px;
-}
-
-nav a:hover {
-    background-color: #1a4a7a;
+    background-color: #0f355c !important;
 }
 
 /* SEÇÕES */
@@ -118,29 +119,10 @@ form input, form select {
     font-size: 1rem;
 }
 
-form button {
-    background-color: #2b6cb0;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #1a4a7a;
-}
-
-/* RESPONSIVO */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-    
-    header h1 {
-        font-size: 2rem;
-    }
+/* RODAPÉ */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    color: #555;
 }
