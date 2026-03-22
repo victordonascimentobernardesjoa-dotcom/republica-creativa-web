@@ -1,30 +1,61 @@
 /* Estilos gerais do site */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f0f4f8;
-    color: #2d3748;
 }
 
 /* Estilos do cabeçalho */
 header {
-    text-align: center;
-    padding: 30px;
     background-color: #2b6cb0;
     color: white;
+    padding: 40px 20px;
+    text-align: center;
     border-radius: 8px;
     margin-bottom: 30px;
 }
 
-/* Estilos da seção "Sobre o Projeto" */
-section {
-    background-color: white;
+/* Estilos do menu de navegação */
+nav {
+    margin-bottom: 20px;
+}
 
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+nav ul {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+    display: flex !important;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #1a4a7a;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column !important;
+        gap: 10px;
+        text-align: center;
+    }
 }
 
 /* Estilos para títulos */
@@ -49,45 +80,11 @@ header p {
     font-size: 1.2em;
     color: #e2e8f0;
 }
-/* AJUSTE NO MENU PARA CELULARES */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column; /* Deixa o menu em coluna no celular */
-        gap: 10px;
-        margin-bottom: 15px;
-    }
-}
-/* Estilos para o menu de navegação */
-nav {
-    margin-bottom: 20px; /* Espaço entre o menu e o título */
-}
 
-nav ul {
-    list-style: none; /* Remove os pontos da lista */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Coloca os itens lado a lado */
-    justify-content: center; /* Centraliza o menu */
-    gap: 25px; /* Espaço entre os itens */
-}
-
-nav a {
-    color: white; /* Cor do texto branca */
-    text-decoration: none; /* Remove o sublinhado */
-    font-weight: bold; /* Deixa o texto negrito */
-    padding: 8px 15px; /* Aumenta a área clicável */
-    border-radius: 4px; /* Cantos arredondados */
-}
-
-nav a:hover {
-    background-color: #1a4a7a; /* Cor ao passar o mouse */
-}
-
-/* Ajuste para celulares */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column; /* Itens em coluna */
-        gap: 10px;
-        text-align: center;
-    }
+/* Estilos da seção Sobre */
+section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
