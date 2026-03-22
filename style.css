@@ -41,4 +41,9 @@ h2 {
 p {
     line-height: 1.6;
     margin-bottom: 15px;
-}
+} 45    
+46    header p {
+47        
+48        font-size: 1.2em;
+49        color: #e2e8f0;
+50    }
