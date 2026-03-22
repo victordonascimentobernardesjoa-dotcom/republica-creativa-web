@@ -42,31 +42,28 @@ header nav a:hover {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 15px;
 }
 
-header p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* BOTÕES UNIFORMES E COMPACTOS */
+/* AJUSTE FINAL DOS BOTÕES - NENHUM VAI SOBREPOR O TEXTO */
 .btn-principal, .btn-secundario {
-    width: 100%;
-    max-width: 180px; /* Tamanho padrão para todos */
-    padding: 10px 0;
+    width: auto; /* Não deixa o botão crescer demais */
+    max-width: 160px !important; /* Largura máxima FIXA para todos */
+    padding: 8px 12px;
     border-radius: 6px;
     font-weight: bold;
-    text-align: center;
     text-decoration: none;
     border: none;
     cursor: pointer;
+    color: white;
+    text-align: center;
+    margin-top: 10px !important; /* Espaço obrigatório entre texto e botão */
+    display: inline-block !important; /* Não ocupa toda a linha desnecessariamente */
 }
 
 .btn-principal {
     background-color: #1a4a7a;
-    color: white;
 }
 
 .btn-principal:hover {
@@ -75,14 +72,12 @@ header p {
 
 .btn-secundario {
     background-color: #2b6cb0;
-    color: white;
 }
 
 .btn-secundario:hover {
     background-color: #1a4a7a;
 }
 
-/* SEÇÕES */
 section {
     background-color: white;
     padding: 30px;
@@ -104,33 +99,20 @@ section h3 {
     margin-bottom: 10px;
 }
 
-/* CARDS DE PROJETOS */
+section p {
+    margin-bottom: 10px; /* Garante espaço entre texto e botão */
+}
+
 .projeto-card {
     background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
     padding: 20px;
+    border-radius: 6px;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.projeto-card img {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-/* AJUSTE PARA TODOS OS BOTÕES FICAREM DO MESMO TAMANHO */
-.btn-principal, .btn-secundario,
-section .btn-principal, section .btn-secundario {
-    max-width: 180px;
-    margin: 10px auto 0; /* Centraliza e adiciona margem superior */
-}
-
-/* RESPONSIVIDADE */
-@media (max-width: 600px) {
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
 }
