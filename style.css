@@ -49,3 +49,11 @@ header p {
     font-size: 1.2em;
     color: #e2e8f0;
 }
+/* AJUSTE NO MENU PARA CELULARES */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Deixa o menu em coluna no celular */
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+}
