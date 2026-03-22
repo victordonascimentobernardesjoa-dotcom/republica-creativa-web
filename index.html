@@ -17,22 +17,24 @@
                 <li><a href="#funcionalidades">Funcionalidades</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="#cadastro">Cadastro</a></li>
             </ul>
         </nav>
 
         <h1>Bem-vindo à República Criativa Web!</h1>
         <p>Sua plataforma para construir nações fictícias completas, como se fossem reais!</p>
+        <a href="#cadastro" class="btn-principal">Começar Agora!</a>
     </header>
 
     <section id="sobre">
         <h2>Sobre o Projeto</h2>
-        <p>Aqui você poderá criar, desenvolver e evoluir nações fictícias completas, com todos os elementos de um país real:</p>
+        <p>Aqui você cria, desenvolve e evolui nações fictícias com TODOS os elementos de um país real:</p>
         <ul>
             <li>Sistemas políticos e ideologias (reais ou criadas por você)</li>
             <li>Moedas próprias e economia estruturada</li>
             <li>Religiões, crenças e tradições</li>
             <li>Bandeiras, hinos e símbolos nacionais</li>
-            <li>Leis que impactam o desenvolvimento do país</li>
+            <li>Leis com impactos no desenvolvimento</li>
             <li>Comércio e acordos com outras nações</li>
             <li>Recursos naturais e produção de bens</li>
         </ul>
@@ -40,28 +42,57 @@
 
     <section id="funcionalidades">
         <h2>Funcionalidades Principais</h2>
+        
         <h3>Crie Sua Nação do Zero</h3>
-        <p>Defina cada detalhe: nome, território, sistema político (democracia, ditadura, monarquia, etc.), ideologia (capitalismo, socialismo, ou algo único que você inventar), moeda, religião e símbolos como bandeira e hino.</p>
+        <p>Defina nome, território, sistema político (democracia, ditadura, monarquia...), ideologia (capitalismo, socialismo ou algo único), moeda, religião e símbolos como bandeira e hino.</p>
         
         <h3>Economia e Comércio</h3>
-        <p>Gerencie recursos naturais (minérios, água, vegetação), produza bens e negocie acordos comerciais, tratados de cooperação ou alianças com outras nações criadas pela comunidade.</p>
+        <p>Gerencie recursos naturais, produza bens e negocie acordos comerciais, tratados ou alianças com outras nações da comunidade.</p>
         
         <h3>Leis e Impactos</h3>
-        <p>Crie leis que moldam o funcionamento do seu país — algumas podem impulsionar a economia, outras fortalecer a segurança, ou até mesmo gerar desafios dependendo da ideologia escolhida.</p>
+        <p>Crie leis que moldam seu país — algumas impulsionam a economia, outras fortalecem a segurança ou geram desafios dependendo da ideologia escolhida!</p>
         
         <h3>Interaja com a Comunidade</h3>
-        <p>Conheça nações de outros criadores, faça acordos, resolva conflitos ou unifique seus países em blocos regionais ou internacionais!</p>
+        <p>Conheça nações de outros criadores, faça acordos, resolva conflitos ou unifique seus países em blocos!</p>
     </section>
 
     <section id="projetos">
         <h2>Projetos Exemplos</h2>
-        <p>Aqui você encontrará nações criadas pela comunidade, com seus sistemas políticos, ideologias e histórias únicas — use como inspiração ou crie algo completamente diferente!</p>
+        <p>Aqui estão nações criadas pela comunidade:</p>
+        <ul>
+            <li><strong>Império de Valdris</strong> — Monarquia constitucional com ideologia mercantilista</li>
+            <li><strong>República Socialista de Auroria</strong> — Socialismo democrático com economia baseada em energia solar</li>
+            <li><strong>Estado de Kharos</strong> — Ditadura militar com ideologia própria criada pela comunidade</li>
+        </ul>
     </section>
 
     <section id="contato">
         <h2>Contato</h2>
-        <p>Entre em contato conosco para tirar dúvidas ou sugerir novas funcionalidades:</p>
+        <p>Tire dúvidas ou sugira funcionalidades:</p>
         <p>Email: contato@republicacriativaweb.com.br</p>
+    </section>
+
+    <section id="cadastro">
+        <h2>Cadastre-se e Comece!</h2>
+        <form>
+            <label for="nome">Nome do Seu País/Nome de Usuário:</label>
+            <input type="text" id="nome" placeholder="Ex: Império de Valdris" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="ideologia">Ideologia Principal Inicial:</label>
+            <select id="ideologia" required>
+                <option value="">Escolha uma</option>
+                <option value="capitalismo">Capitalismo</option>
+                <option value="socialismo">Socialismo</option>
+                <option value="comunismo">Comunismo</option>
+                <option value="monarquia">Monarquia</option>
+                <option value="outra">Outra (criada por mim)</option>
+            </select>
+            
+            <button type="submit" class="btn-principal">Criar Minha Nação</button>
+        </form>
     </section>
 </body>
 </html>
