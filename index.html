@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>República Criativa Web</title>
-    <meta name="description" content="Plataforma para criar nações fictícias completas com sistemas políticos, economia, religião e muito mais!">
+    <meta name="description" content="Plataforma para criar nações fictícias completas com sistemas políticos, economia, bandeiras e muito mais!">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,25 +15,25 @@
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#funcionalidades">Funcionalidades</a></li>
                 <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#criar-bandeira">Criar Bandeira</a></li>
                 <li><a href="#cadastro">Cadastro</a></li>
             </ul>
         </nav>
 
         <h1>Bem-vindo à República Criativa Web!</h1>
-        <p>Sua plataforma para construir nações fictícias COMPLETAS — com sistemas políticos, economia, religião e muito mais!</p>
+        <p>Sua plataforma para construir nações fictícias COMPLETAS — com sistemas políticos, economia, bandeiras e muito mais!</p>
         <a href="#cadastro" class="btn-principal">Começar Agora!</a>
     </header>
 
     <section id="sobre">
         <h2>Sobre o Projeto</h2>
-        <p>Aqui você cria, desenvolve e evolui nações fictícias com todos os elementos de um país real:</p>
+        <p>Aqui você cria nações fictícias com todos os elementos de um país real:</p>
         <ul>
             <li>Sistemas políticos (reais ou criados por você)</li>
             <li>Moedas e economias próprias</li>
             <li>Religiões e crenças</li>
             <li>Bandeiras, hinos e símbolos nacionais</li>
-            <li>Leis que impactam o funcionamento do país</li>
+            <li>Leis que impactam o país</li>
             <li>Comércio e acordos com outras nações</li>
         </ul>
     </section>
@@ -41,37 +41,83 @@
     <section id="funcionalidades">
         <h2>Funcionalidades Principais</h2>
         
-        <h3>Crie Sua Nação</h3>
+        <h3>Criar Nações</h3>
         <p>Defina nome, território, sistema político, ideologia e símbolos como bandeira e hino.</p>
         
         <h3>Economia e Comércio</h3>
-        <p>Crie moedas próprias, gerencie recursos naturais e negocie acordos comerciais com outras nações.</p>
+        <p>Gerencie recursos naturais, crie moedas e negocie acordos comerciais.</p>
         
         <h3>Leis e Impactos</h3>
-        <p>Crie leis que podem melhorar ou dificultar o desenvolvimento do seu país, dependendo da ideologia escolhida.</p>
+        <p>Crie leis que moldam o funcionamento do seu país.</p>
         
         <h3>Comunidade</h3>
-        <p>Faça acordos, alianças ou resolva conflitos com nações criadas por outros usuários!</p>
+        <p>Interaja com outras nações criadas pela comunidade!</p>
+
+        <h3>Criar e Personalizar Bandeiras</h3>
+        <p>Desenvolva sua própria bandeira com cores, símbolos e formatos personalizados — ou use nossa ferramenta de criação!</p>
+        <a href="#criar-bandeira" class="btn-principal">Criar Minha Bandeira</a>
     </section>
 
     <section id="projetos">
         <h2>Projetos Exemplos</h2>
-        <ul>
-            <li><strong>Império de Valdris</strong> — Monarquia com economia mercantilista</li>
-            <li><strong>República Socialista de Auroria</strong> — Socialismo democrático com energia limpa</li>
-            <li><strong>Estado de Kharos</strong> — Ideologia própria criada pela comunidade</li>
-        </ul>
+        <div class="projeto-card">
+            <img src="https://via.placeholder.com/300x150?text=Bandeira+Valdris" alt="Bandeira do Império de Valdris">
+            <h3>Império de Valdris</h3>
+            <p>Monarquia com economia mercantilista</p>
+            <a href="projetos/valdris.html" class="btn-secundario">Ver Detalhes</a>
+        </div>
+
+        <div class="projeto-card">
+            <img src="https://via.placeholder.com/300x150?text=Bandeira+Auroria" alt="Bandeira da República Socialista de Auroria">
+            <h3>República Socialista de Auroria</h3>
+            <p>Socialismo democrático com energia limpa</p>
+            <a href="projetos/auroria.html" class="btn-secundario">Ver Detalhes</a>
+        </div>
+
+        <div class="projeto-card">
+            <img src="https://via.placeholder.com/300x150?text=Bandeira+Kharos" alt="Bandeira do Estado de Kharos">
+            <h3>Estado de Kharos</h3>
+            <p>Ideologia própria criada pela comunidade</p>
+            <a href="projetos/kharos.html" class="btn-secundario">Ver Detalhes</a>
+        </div>
+    </section>
+
+    <section id="criar-bandeira">
+        <h2>Criar Sua Própria Bandeira</h2>
+        <div class="ferramenta-bandeira">
+            <div class="canvas-bandeira" id="canvas-bandeira"></div>
+            
+            <div class="controles-bandeira">
+                <label for="cor-fundo">Cor de Fundo:</label>
+                <input type="color" id="cor-fundo">
+
+                <label for="cor-simbolo">Cor do Símbolo:</label>
+                <input type="color" id="cor-simbolo">
+
+                <label for="simbolo">Símbolo:</label>
+                <select id="simbolo">
+                    <option value="estrela">Estrela</option>
+                    <option value="cruz">Cruz</option>
+                    <option value="sol">Sol</option>
+                    <option value="dragao">Dragão</option>
+                    <option value="proprio">Desenhar meu próprio símbolo</option>
+                </select>
+
+                <button id="salvar-bandeira" class="btn-principal">Salvar Bandeira</button>
+            </div>
+        </div>
+        <p>Após criar, você poderá associar essa bandeira à sua nação!</p>
     </section>
 
     <section id="cadastro">
-        <h2>Cadastre-se e Crie Sua Nação</h2>
+        <h2>Cadastre-se e Comece!</h2>
         <form>
             <label for="nome-pais">Nome da Sua Nação:</label>
             <input type="text" id="nome-pais" placeholder="Ex: Império de Valdris" required>
             
             <label for="ideologia">Ideologia Principal:</label>
             <select id="ideologia" required>
-                <option value="">Escolha uma opção</option>
+                <option value="">Escolha uma</option>
                 <option value="capitalismo">Capitalismo</option>
                 <option value="socialismo">Socialismo</option>
                 <option value="comunismo">Comunismo</option>
@@ -82,12 +128,18 @@
             <label for="email">Email:</label>
             <input type="email" id="email" required>
             
+            <label for="bandeira-arquivo">Ou faça upload da sua bandeira:</label>
+            <input type="file" id="bandeira-arquivo" accept="image/png, image/jpeg">
+            
             <button type="submit" class="btn-principal">Criar Minha Nação</button>
         </form>
     </section>
 
     <footer>
         <p>© 2026 República Criativa Web — Todos os direitos reservados</p>
+        <p>Email: contato@republicacriativaweb.com.br</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
