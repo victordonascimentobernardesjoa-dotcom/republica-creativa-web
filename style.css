@@ -1,0 +1,44 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+    color: #2d3748;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #2b6cb0;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Seção sobre */
+section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para títulos e parágrafos */
+h1 {
+    margin-top: 0;
+    font-size: 2.2rem;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #2b6cb0;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
