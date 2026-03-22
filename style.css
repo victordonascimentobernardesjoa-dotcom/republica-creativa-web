@@ -57,3 +57,37 @@ header p {
         margin-bottom: 15px;
     }
 }
+/* Estilos para o menu de navegação */
+nav {
+    margin-bottom: 20px; /* Espaço entre o menu e o título */
+}
+
+nav ul {
+    list-style: none; /* Remove os pontos da lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Coloca os itens lado a lado */
+    justify-content: center; /* Centraliza o menu */
+    gap: 25px; /* Espaço entre os itens */
+}
+
+nav a {
+    color: white; /* Cor do texto branca */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Deixa o texto negrito */
+    padding: 8px 15px; /* Aumenta a área clicável */
+    border-radius: 4px; /* Cantos arredondados */
+}
+
+nav a:hover {
+    background-color: #1a4a7a; /* Cor ao passar o mouse */
+}
+
+/* Ajuste para celulares */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Itens em coluna */
+        gap: 10px;
+        text-align: center;
+    }
+}
