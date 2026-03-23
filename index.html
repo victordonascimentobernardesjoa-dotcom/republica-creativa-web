@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- CABEÇALHO FIXO E ORGANIZADO -->
     <header>
         <div class="container">
             <h1>República Criativa Web</h1>
@@ -25,7 +24,6 @@
         </div>
     </header>
 
-    <!-- SEÇÃO INICIAL -->
     <section id="inicio" class="secao-hero">
         <div class="container">
             <h2>Crie Nações Fictícias <span>Completas</span></h2>
@@ -37,7 +35,6 @@
         </div>
     </section>
 
-    <!-- SEÇÃO SOBRE -->
     <section id="sobre" class="secao-padrao">
         <div class="container">
             <h2>Sobre o Projeto</h2>
@@ -59,12 +56,10 @@
         </div>
     </section>
 
-    <!-- SEÇÃO IDEOLOGIAS -->
     <section id="ideologias" class="secao-padrao fundo-claro">
         <div class="container">
             <h2>Ideologias Disponíveis</h2>
             <div class="ideologias-grid">
-                <!-- GRUPO IDEOLOGIAS REAIS -->
                 <div class="ideologia-card">
                     <h3>Ideologias Reais</h3>
                     <ul>
@@ -83,7 +78,6 @@
                     </ul>
                 </div>
 
-                <!-- GRUPO IDEOLOGIAS FICTÍCIAS -->
                 <div class="ideologia-card">
                     <h3>Ideologias Fictícias</h3>
                     <ul>
@@ -106,22 +100,19 @@
         </div>
     </section>
 
-    <!-- SEÇÃO BANDEIRAS -->
     <section id="bandeiras" class="secao-padrao">
         <div class="container">
             <h2>Crie ou Importe Sua Bandeira</h2>
             <div class="bandeiras-container">
-                <!-- PARTE DE CRIAR BANDEIRA -->
                 <div class="bandeira-card">
                     <h3>Criar Bandeira Personalizada</h3>
                     
-                    <!-- CANVAS COM BORDA VISÍVEL -->
+                    <!-- CANVAS CORRIGIDO -->
                     <div class="canvas-container">
-                        <canvas id="canvas-bandeira" width="300" height="200"></canvas>
+                        <canvas id="canvas-bandeira" width="300" height="200" style="border: 2px solid #1a4a7a; display: block; margin: 0 auto;"></canvas>
                         <p class="legenda">Visualização da Bandeira</p>
                     </div>
 
-                    <!-- CONTROLES ORGANIZADOS EM GRID -->
                     <div class="controles-grid">
                         <div class="controle-item">
                             <label>Cor de Fundo:</label>
@@ -184,7 +175,6 @@
                     </div>
                 </div>
 
-                <!-- PARTE DE IMPORTAR BANDEIRA -->
                 <div class="bandeira-card">
                     <h3>Importar Bandeira Pronta</h3>
                     <p class="instrucao">Envie arquivos no formato PNG ou JPG (tamanho máximo: 5MB)</p>
@@ -200,7 +190,7 @@
                     <div class="preview-container">
                         <p>Pré-visualização:</p>
                         <div id="preview-bandeira">
-                            <img src="https://via.placeholder.com/300x200?text=Nenhuma+Imagem" alt="Pré-visualização" id="preview-imagem">
+                            <img src="https://via.placeholder.com/300x200?text=Nenhuma+Imagem" alt="Pré-visualização" id="preview-imagem" style="max-width: 100%; height: auto;">
                         </div>
                     </div>
 
@@ -210,15 +200,13 @@
         </div>
     </section>
 
-    <!-- SEÇÃO PROJETOS -->
     <section id="projetos" class="secao-padrao fundo-claro">
         <div class="container">
             <h2>Projetos Exemplos</h2>
             <div class="projetos-grid">
-                <!-- PROJETO 1 -->
                 <div class="projeto-card">
                     <div class="projeto-imagem">
-                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Valdris" alt="Bandeira do Império de Valdris">
+                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Valdris" alt="Bandeira do Império de Valdris" style="max-width: 100%; height: auto;">
                     </div>
                     <h3>Império de Valdris</h3>
                     <p class="ideologia">Ideologia: Monarquia Constitucional</p>
@@ -229,10 +217,9 @@
                     <button class="btn-secundario">Ver Detalhes</button>
                 </div>
 
-                <!-- PROJETO 2 -->
                 <div class="projeto-card">
                     <div class="projeto-imagem">
-                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Auroria" alt="Bandeira da República Socialista de Auroria">
+                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Auroria" alt="Bandeira da República Socialista de Auroria" style="max-width: 100%; height: auto;">
                     </div>
                     <h3>República Socialista de Auroria</h3>
                     <p class="ideologia">Ideologia: Social-Democracia</p>
@@ -242,10 +229,9 @@
                     <button class="btn-secundario">Ver Detalhes</button>
                 </div>
 
-                <!-- PROJETO 3 -->
                 <div class="projeto-card">
                     <div class="projeto-imagem">
-                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Kharos" alt="Bandeira do Estado de Kharos">
+                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Kharos" alt="Bandeira do Estado de Kharos" style="max-width: 100%; height: auto;">
                     </div>
                     <h3>Estado de Kharos</h3>
                     <p class="ideologia">Ideologia: Technocracia Universal</p>
@@ -258,7 +244,6 @@
         </div>
     </section>
 
-    <!-- SEÇÃO CADASTRO -->
     <section id="cadastro" class="secao-padrao">
         <div class="container">
             <h2>Cadastre-se e Crie Sua Nação</h2>
@@ -278,7 +263,6 @@
                         <label>Ideologia Política *</label>
                         <select id="ideologia-selecao" required>
                             <option value="">Selecione uma opção</option>
-                            <!-- IDEOLOGIAS REAIS -->
                             <option value="capitalismo">Capitalismo</option>
                             <option value="socialismo">Socialismo</option>
                             <option value="comunismo">Comunismo</option>
@@ -291,9 +275,19 @@
                             <option value="progressismo">Progressismo</option>
                             <option value="teocracia">Teocracia</option>
                             <option value="social-democracia">Social-Democracia</option>
-                            <!-- IDEOLOGIAS FICTÍCIAS -->
                             <option value="technocracia-universal">Technocracia Universal</option>
                             <option value="ecologismo-profundo">Ecologismo Profundo</option>
                             <option value="comunhao-tribal">Comunhão Tribal Moderna</option>
                             <option value="utopianismo-racional">Utopianismo Racional</option>
-                            <option value="transumanismo-polit
+                            <option value="propria">Criar Minha Própria Ideologia</option>
+                        </select>
+                    </div>
+
+                    <div id="form-ideologia-propria" style="display: none; width: 100%;">
+                        <label>Descreva Sua Ideologia *</label>
+                        <textarea rows="4" placeholder="Explique os princípios, valores e funcionamento da sua ideologia..."></textarea>
+                    </div>
+
+                    <div class="form-item" style="width: 100%;">
+                        <label>Bandeira da Nação *</label>
+                        <p>Escolha entre criar acima ou fazer
