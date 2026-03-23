@@ -4,7 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>República Criativa Web</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ESTILO GERAL */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* CABEÇALHO */
+        header {
+            background-color: #1a365d;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            color: white;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        nav {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* SEÇÕES */
+        section {
+            padding: 40px 0;
+        }
+
+        section h2 {
+            color: #1a365d;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+
+        /* PROJETOS EXEMPLOS */
+        #projetos {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .projetos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .projeto-card {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .projeto-imagem {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* BANDEIRAS DOS PROJETOS */
+        #bandeira-valdris {
+            background-image: url('https://i.imgur.com/7ZxQ2aL.png');
+        }
+
+        #bandeira-auroria {
+            background-image: url('https://i.imgur.com/9YkFbXj.png');
+        }
+
+        #bandeira-kharos {
+            background-image: url('https://i.imgur.com/3PqZtLb.png');
+        }
+
+        .projeto-card h3 {
+            color: #1a365d;
+            margin-bottom: 10px;
+        }
+
+        .projeto-card p {
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background-color: #1a365d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #2d5a8c;
+        }
+
+        /* IMPORTAR BANDEIRA */
+        #bandeiras {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .importar-container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .importar-container p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .btn-upload {
+            background-color: #2d5a8c;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            display: inline-block;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .btn-upload input {
+            display: none;
+        }
+
+        #arquivo-selecionado {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        #preview-bandeira {
+            width: 100%;
+            height: 200px;
+            border: 2px dashed #ccc;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #preview-bandeira img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background-color: #1a365d;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
     <!-- CABEÇALHO -->
@@ -12,322 +207,145 @@
         <div class="container">
             <h1>República Criativa Web</h1>
             <nav>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#ideologias">Ideologias</a></li>
-                    <li><a href="#bandeiras">Bandeiras</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#cadastro">Cadastro</a></li>
-                </ul>
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#ideologias">Ideologias</a>
+                <a href="#bandeiras">Bandeiras</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#cadastro">Cadastro</a>
             </nav>
         </div>
     </header>
 
     <!-- SEÇÃO INÍCIO -->
-    <section id="inicio" class="secao-padrao">
-        <div class="container">
-            <h2>Bem-vindo à República Criativa Web</h2>
-            <p>Crie e gerencie suas próprias nações fictícias com ideologias, bandeiras e detalhes personalizados!</p>
-        </div>
+    <section id="inicio" class="container">
+        <h2>Bem-vindo à República Criativa Web</h2>
+        <p style="text-align: center; color: #555; max-width: 800px; margin: 0 auto;">
+            Gerencie suas nações fictícias, visualize projetos exemplos e importe bandeiras personalizadas para sua criação!
+        </p>
     </section>
 
-    <!-- SEÇÃO SOBRE -->
-    <section id="sobre" class="secao-padrao fundo-claro">
-        <div class="container">
-            <h2>Sobre o Projeto</h2>
-            <p>A República Criativa Web é uma plataforma para quem ama criar mundos fictícios, nações e universos imaginários. Aqui você pode definir ideologias, desenhar bandeiras e compartilhar seus projetos!</p>
-        </div>
-    </section>
+    <!-- SEÇÃO PROJETOS EXEMPLOS -->
+    <section id="projetos" class="container">
+        <h2>Projetos Exemplos</h2>
+        <div class="projetos-grid">
+            <!-- IMPÉRIO DE VALDRIS -->
+            <div class="projeto-card">
+                <div class="projeto-imagem" id="bandeira-valdris"></div>
+                <h3>Império de Valdris</h3>
+                <p><strong>Ideologia:</strong> Monarquia Constitucional</p>
+                <p>
+                    Um império com mais de 500 anos de história, conhecido por sua arquitetura medieval, sistema de nobreza organizado e forças armadas bem treinadas.
+                </p>
+                <button class="btn">Ver Detalhes</button>
+            </div>
 
-    <!-- SEÇÃO IDEOLOGIAS -->
-    <section id="ideologias" class="secao-padrao">
-        <div class="container">
-            <h2>Ideologias Disponíveis</h2>
-            <div class="ideologias-grid">
-                <div class="ideologia-card">
-                    <h3>Ideologias Reais</h3>
-                    <ul>
-                        <li><strong>Monarquia Constitucional</strong><br>Governado por um rei/rainha com poderes limitados por leis</li>
-                        <li><strong>Social-Democracia</strong><br>Capitalismo com estado de bem-estar social</li>
-                        <li><strong>Technocracia</strong><br>Governado por especialistas e tecnologia</li>
-                    </ul>
-                </div>
-                <div class="ideologia-card">
-                    <h3>Ideologias Fictícias</h3>
-                    <ul>
-                        <li><strong>Império Valdris</strong><br>Monarquia militarizada com nobreza organizada</li>
-                        <li><strong>Auroria Socialista</strong><br>Igualdade e progresso tecnológico</li>
-                        <li><strong>Kharos Technocrática</strong><br>Justiça baseada em dados e IA</li>
-                    </ul>
-                </div>
+            <!-- REPÚBLICA SOCIALISTA DE AURORIA -->
+            <div class="projeto-card">
+                <div class="projeto-imagem" id="bandeira-auroria"></div>
+                <h3>República Socialista de Auroria</h3>
+                <p><strong>Ideologia:</strong> Social-Democracia</p>
+                <p>
+                    Uma nação pioneira em energia limpa, com foco em igualdade de gênero e direitos humanos. A estrela simboliza esperança e progresso.
+                </p>
+                <button class="btn">Ver Detalhes</button>
+            </div>
+
+            <!-- ESTADO DE KHAROS -->
+            <div class="projeto-card">
+                <div class="projeto-imagem" id="bandeira-kharos"></div>
+                <h3>Estado de Kharos</h3>
+                <p><strong>Ideologia:</strong> Technocracia Universal</p>
+                <p>
+                    Governado por inteligências artificiais e cientistas, com tecnologia avançada. A balança representa justiça baseada em dados.
+                </p>
+                <button class="btn">Ver Detalhes</button>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO BANDEIRAS -->
-    <section id="bandeiras" class="secao-padrao fundo-claro">
-        <div class="container">
-            <h2>Crie Sua Bandeira</h2>
-            <div class="bandeira-card">
-                <div class="canvas-container">
-                    <canvas id="canvas-bandeira" width="300" height="200" style="border: 2px solid #1a4a7a;"></canvas>
-                    <p>Visualização da Bandeira</p>
-                </div>
-
-                <div class="controles-grid">
-                    <div class="controle-item">
-                        <label>Cor de Fundo:</label>
-                        <input type="color" id="cor-fundo" value="#ffffff">
-                    </div>
-                    <div class="controle-item">
-                        <label>Cor dos Símbolos:</label>
-                        <input type="color" id="cor-simbolo" value="#000000">
-                    </div>
-                    <div class="controle-item">
-                        <label>Tipo de Símbolo:</label>
-                        <select id="tipo-simbolo">
-                            <option value="coroa">Coroa</option>
-                            <option value="estrela">Estrela</option>
-                            <option value="espadas">Espadas Cruzadas</option>
-                            <option value="balanca">Balança</option>
-                        </select>
-                    </div>
-                    <div class="controle-botoes">
-                        <button id="btn-desenhar" class="btn-principal">Atualizar Bandeira</button>
-                        <button id="btn-salvar" class="btn-secundario">Salvar Bandeira</button>
-                    </div>
-                </div>
+    <!-- SEÇÃO IMPORTAR BANDEIRA -->
+    <section id="bandeiras" class="container">
+        <h2>Importe Sua Bandeira</h2>
+        <div class="importar-container">
+            <p>Envie arquivos no formato PNG ou JPG (tamanho máximo: 5MB)</p>
+            
+            <label for="upload-bandeira" class="btn-upload">
+                <span>Selecionar Arquivo</span>
+                <input type="file" id="upload-bandeira" accept="image/png, image/jpeg">
+            </label>
+            
+            <p id="arquivo-selecionado">Nenhum arquivo selecionado</p>
+            
+            <div id="preview-bandeira">
+                <img id="preview-imagem" style="display: none;" alt="Pré-visualização da bandeira">
+                <span style="color: #ccc;">Pré-visualização</span>
             </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO PROJETOS COM BANDEIRAS FUNCIONAIS -->
-    <section id="projetos" class="secao-padrao fundo-claro">
-        <div class="container">
-            <h2>Projetos Exemplos</h2>
-            <div class="projetos-grid">
-                <!-- IMPÉRIO DE VALDRIS -->
-                <div class="projeto-card">
-                    <div class="projeto-imagem">
-                        <!-- Bandeira do Império de Valdris - Desenhada via Canvas Interno -->
-                        <canvas width="300" height="200" style="border: none; max-width: 100%; height: auto;">
-                            Seu navegador não suporta canvas, mas a bandeira é do Império de Valdris!
-                        </canvas>
-                        <script>
-                            // Desenhar Bandeira Valdris diretamente no canvas do projeto
-                            const canvasValdris = document.querySelector('.projeto-card:nth-child(1) canvas');
-                            if (canvasValdris.getContext) {
-                                const ctxV = canvasValdris.getContext('2d');
-                                // Fundo amarelo ouro
-                                ctx.fillStyle = '#D4AF37';
-                                ctx.fillRect(0, 0, 300, 200);
-                                // Faixa cinza central
-                                ctx.fillStyle = '#696969';
-                                ctx.fillRect(0, 80, 300, 40);
-                                // Coroa amarela
-                                ctx.fillStyle = '#D4AF37';
-                                // Desenho da coroa
-                                ctx.beginPath();
-                                ctx.moveTo(150, 90);
-                                ctx.lineTo(130, 85);
-                                ctx.lineTo(125, 70);
-                                ctx.lineTo(135, 65);
-                                ctx.lineTo(145, 70);
-                                ctx.lineTo(155, 65);
-                                ctx.lineTo(165, 70);
-                                ctx.lineTo(175, 65);
-                                ctx.lineTo(185, 70);
-                                ctx.lineTo(180, 85);
-                                ctx.lineTo(170, 80);
-                                ctx.lineTo(165, 95);
-                                ctx.lineTo(155, 90);
-                                ctx.lineTo(145, 95);
-                                ctx.lineTo(135, 90);
-                                ctx.lineTo(130, 95);
-                                ctx.lineTo(120, 90);
-                                ctx.closePath();
-                                ctx.fill();
-                                // Espadas nos cantos
-                                ctx.fillStyle = '#696969';
-                                // Espada superior esquerda
-                                ctx.beginPath();
-                                ctx.moveTo(30, 30);
-                                ctx.lineTo(20, 40);
-                                ctx.lineTo(30, 50);
-                                ctx.lineTo(40, 40);
-                                ctx.closePath();
-                                ctx.fill();
-                                // Espada inferior direita
-                                ctx.beginPath();
-                                ctx.moveTo(270, 170);
-                                ctx.lineTo(260, 160);
-                                ctx.lineTo(270, 150);
-                                ctx.lineTo(280, 160);
-                                ctx.closePath();
-                                ctx.fill();
-                            }
-                        </script>
-                    </div>
-                    <h3>Império de Valdris</h3>
-                    <p class="ideologia">Ideologia: Monarquia Constitucional</p>
-                    <p class="descricao">
-                        Um império com mais de 500 anos de história, conhecido por sua arquitetura medieval, sistema de nobreza organizado e forças armadas bem treinadas — representadas pelas espadas cruzadas.
-                    </p>
-                    <button class="btn-secundario">Ver Detalhes</button>
-                </div>
-
-                <!-- REPÚBLICA SOCIALISTA DE AURORIA -->
-                <div class="projeto-card">
-                    <div class="projeto-imagem">
-                        <canvas width="300" height="200" style="border: none; max-width: 100%; height: auto;">
-                            Seu navegador não suporta canvas, mas esta é a bandeira da República Socialista de Auroria!
-                        </canvas>
-                        <script>
-                            const canvasAuroria = document.querySelector('.projeto-card:nth-child(2) canvas');
-                            if (canvasAuroria.getContext) {
-                                const ctxA = canvasAuroria.getContext('2d');
-                                // Fundo vermelho
-                                ctxA.fillStyle = '#FF0000';
-                                ctxA.fillRect(0, 0, 300, 200);
-                                // Círculo branco central
-                                ctxA.fillStyle = '#FFFFFF';
-                                ctxA.beginPath();
-                                ctxA.arc(150, 100, 60, 0, Math.PI * 2);
-                                ctxA.fill();
-                                // Estrela vermelha
-                                ctxA.fillStyle = '#FF0000';
-                                ctxA.beginPath();
-                                for (let i = 0; i < 5; i++) {
-                                    ctxA.lineTo(150 + 30 * Math.sin(i * 2 * Math.PI / 5), 100 + 30 * Math.cos(i * 2 * Math.PI / 5));
-                                    ctxA.lineTo(150 + 15 * Math.sin(i * 2 * Math.PI / 5), 100 + 15 * Math.cos(i * 2 * Math.PI / 5));
-                                }
-                                ctxA.closePath();
-                                ctxA.fill();
-                            }
-                        </script>
-                    </div>
-                    <h3>República Socialista de Auroria</h3>
-                    <p class="ideologia">Ideologia: Social-Democracia</p>
-                    <p class="descricao">
-                        Uma nação pioneira em energia limpa, com foco em igualdade de gênero e direitos humanos. A estrela simboliza a esperança e o progresso para um futuro justo para todos.
-                    </p>
-                    <button class="btn-secundario">Ver Detalhes</button>
-                </div>
-
-                <!-- ESTADO DE KHAROS -->
-                <div class="projeto-card">
-                    <div class="projeto-imagem">
-                        <canvas width="300" height="200" style="border: none; max-width: 100%; height: auto;">
-                            Seu navegador não suporta canvas, mas esta é a bandeira do Estado de Kharos!
-                        </canvas>
-                        <script>
-                            const canvasKharos = document.querySelector('.projeto-card:nth-child(3) canvas');
-                            if (canvasKharos.getContext) {
-                                const ctxK = canvasKharos.getContext('2d');
-                                // Fundo branco
-                                ctxK.fillStyle = '#FFFFFF';
-                                ctxK.fillRect(0, 0, 300, 200);
-                                // Faixa preta diagonal
-                                ctxK.fillStyle = '#000000';
-                                ctxK.beginPath();
-                                ctxK.moveTo(0, 50);
-                                ctxK.lineTo(300, 150);
-                                ctxK.lineTo(280, 160);
-                                ctxK.lineTo(20, 40);
-                                ctxK.closePath();
-                                ctxK.fill();
-                                // Balança branca no centro
-                                ctxK.fillStyle = '#FFFFFF';
-                                ctxK.beginPath();
-                                ctxK.moveTo(150, 80);
-                                ctxK.lineTo(130, 100);
-                                ctxK.lineTo(150, 120);
-                                ctxK.lineTo(170, 100);
-                                ctxK.lineTo(150, 80);
-                                ctxK.closePath();
-                                ctxK.fill();
-                            }
-                        </script>
-                    </div>
-                    <h3>Estado de Kharos</h3>
-                    <p class="ideologia">Ideologia: Technocracia Universal</p>
-                    <p class="descricao">
-                        Uma nação governada por inteligências artificiais e cientistas, com tecnologia avançada. A balança representa a justiça baseada em dados e a faixa diagonal simboliza a conexão global.
-                    </p>
-                    <button class="btn-secundario">Ver Detalhes</button>
-                </div>
-            </div>
+            
+            <button class="btn" id="btn-confirmar">Confirmar Importação</button>
         </div>
     </section>
 
     <!-- SEÇÃO CADASTRO -->
-    <section id="cadastro" class="secao-padrao">
-        <div class="container">
-            <h2>Cadastre Sua Nação</h2>
-            <form>
-                <div class="form-item">
-                    <label>Nome da Nação:</label>
-                    <input type="text" placeholder="Ex: Império de Valdris">
+    <section id="cadastro" class="container">
+        <h2>Cadastre Sua Nação</h2>
+        <div style="max-width: 500px; margin: 0 auto; background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div>
+                    <label style="color: #1a365d; font-weight: bold;">Nome da Nação</label>
+                    <input type="text" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Ex: Império de Valdris">
                 </div>
-                <div class="form-item">
-                    <label>Ideologia:</label>
-                    <input type="text" placeholder="Ex: Monarquia Constitucional">
+                <div>
+                    <label style="color: #1a365d; font-weight: bold;">Ideologia</label>
+                    <input type="text" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Ex: Monarquia Constitucional">
                 </div>
-                <div class="form-item">
-                    <label>Descrição:</label>
-                    <textarea placeholder="Descreva sua nação..."></textarea>
+                <div>
+                    <label style="color: #1a365d; font-weight: bold;">Descrição</label>
+                    <textarea style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; min-height: 100px;" placeholder="Descreva sua nação..."></textarea>
                 </div>
-                <button type="submit" class="btn-principal">Cadastrar Nação</button>
-            </form>
+                <button class="btn">Cadastrar Nação</button>
+            </div>
         </div>
     </section>
 
     <!-- RODAPÉ -->
     <footer>
-        <div class="container">
-            <p>República Criativa Web © 2024 - Todos os direitos reservados</p>
-        </div>
+        <p>República Criativa Web © 2024 - Todos os direitos reservados</p>
     </footer>
 
-    <!-- SCRIPT PRINCIPAL -->
+    <!-- SCRIPT PARA IMPORTAR BANDEIRA -->
     <script>
-        // Atualizar bandeira personalizada
-        const canvasBandeira = document.getElementById('canvas-bandeira');
-        const ctx = canvasBandeira?.getContext('2d');
-        const corFundo = document.getElementById('cor-fundo');
-        const corSimbolo = document.getElementById('cor-simbolo');
-        const tipoSimbolo = document.getElementById('tipo-simbolo');
-        const btnDesenhar = document.getElementById('btn-desenhar');
+        const uploadBandeira = document.getElementById('upload-bandeira');
+        const arquivoSelecionado = document.getElementById('arquivo-selecionado');
+        const previewImagem = document.getElementById('preview-imagem');
+        const previewBandeira = document.getElementById('preview-bandeira');
 
-        function desenharBandeira() {
-            if (!ctx) return;
-            // Limpar canvas
-            ctx.clearRect(0, 0, canvasBandeira.width, canvasBandeira.height);
-            // Cor de fundo
-            ctx.fillStyle = corFundo.value;
-            ctx.fillRect(0, 0, canvasBandeira.width, canvasBandeira.height);
-            // Símbolo
-            ctx.fillStyle = corSimbolo.value;
-            const tamanho = parseInt(document.getElementById('tamanho-simbolo').value);
-            
-            switch(tipoSimbolo.value) {
-                case 'coroa':
-                    // Desenhar coroa
-                    ctx.beginPath();
-                    ctx.moveTo(150, 80);
-                    ctx.lineTo(130, 75);
-                    ctx.lineTo(125, 60);
-                    ctx.lineTo(135, 55);
-                    ctx.lineTo(145, 58);
-                    ctx.lineTo(155, 55);
-                    ctx.lineTo(165, 58);
-                    ctx.lineTo(175, 55);
-                    ctx.lineTo(170, 70);
-                    ctx.lineTo(180, 75);
-                    ctx.lineTo(175, 90);
-                    ctx.lineTo(165, 85);
-                    }
-        }
+        uploadBandeira.addEventListener('change', function(e) {
+            const arquivo = e.target.files[0];
+            if (arquivo) {
+                arquivoSelecionado.textContent = `Arquivo: ${arquivo.name}`;
+                
+                const leitor = new FileReader();
+                leitor.onload = function(event) {
+                    previewImagem.src = event.target.result;
+                    previewImagem.style.display = 'block';
+                    previewBandeira.querySelector('span').style.display = 'none';
+                }
+                leitor.readAsDataURL(arquivo);
+            } else {
+                arquivoSelecionado.textContent = 'Nenhum arquivo selecionado';
+                previewImagem.style.display = 'none';
+                previewBandeira.querySelector('span').style.display = 'block';
+            }
+        });
 
-        btnDesenhar
+        document.getElementById('btn-confirmar').addEventListener('click', function() {
+            if (uploadBandeira.files.length > 0) {
+                alert('Bandeira importada com sucesso! 🎉');
+            } else {
+                alert('Selecione uma bandeira primeiro!');
+            }
+        });
+    </script>
+</body>
+</html>
