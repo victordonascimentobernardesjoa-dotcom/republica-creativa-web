@@ -1,331 +1,299 @@
-// INICIALIZAÇÃO DO CANVAS
-const canvas = document.getElementById('canvas-bandeira');
-const ctx = canvas.getContext('2d');
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>República Criativa Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CABEÇALHO FIXO E ORGANIZADO -->
+    <header>
+        <div class="container">
+            <h1>República Criativa Web</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#ideologias">Ideologias</a></li>
+                    <li><a href="#bandeiras">Bandeiras</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#cadastro">Cadastro</a></li>
+                </ul>
+            </nav>
+            <a href="#cadastro" class="btn-principal">Começar Agora</a>
+        </div>
+    </header>
 
-// ELEMENTOS DE CONTROLE
-const corFundo = document.getElementById('cor-fundo');
-const corSimbolo = document.getElementById('cor-simbolo');
-const tipoSimbolo = document.getElementById('tipo-simbolo');
-const qtdSimbolo = document.getElementById('qtd-simbolo');
-const posicaoSimbolo = document.getElementById('posicao-simbolo');
-const btnDesenhar = document.getElementById('btn-desenhar');
-const btnSalvar = document.getElementById('btn-salvar');
-const uploadBandeira = document.getElementById('upload-bandeira');
-const previewBandeira = document.getElementById('preview-bandeira');
-const btnConfirmar = document.getElementById('btn-confirmar');
-const ideologiaSelecao = document.getElementById('ideologia-selecao');
-const formIdeologiaPropria = document.getElementById('form-ideologia-propria');
+    <!-- SEÇÃO INICIAL -->
+    <section id="inicio" class="secao-hero">
+        <div class="container">
+            <h2>Crie Nações Fictícias <span>Completas</span></h2>
+            <p>Desenvolva países com ideologias, bandeiras e sistemas políticos únicos!</p>
+            <div class="hero-botoes">
+                <a href="#bandeiras" class="btn-principal">Criar Bandeira</a>
+                <a href="#ideologias" class="btn-secundario">Ver Ideologias</a>
+            </div>
+        </div>
+    </section>
 
-// DESENHA A BANDEIRA INICIAL (BRANCA)
-desenharBandeira();
+    <!-- SEÇÃO SOBRE -->
+    <section id="sobre" class="secao-padrao">
+        <div class="container">
+            <h2>Sobre o Projeto</h2>
+            <div class="sobre-conteudo">
+                <div class="sobre-texto">
+                    <p>
+                        A República Criativa Web é uma plataforma completa para quem ama construir mundos fictícios. 
+                        Crie nações com todos os elementos de um país real e interaja com uma comunidade apaixonada!
+                    </p>
+                    <ul>
+                        <li>Defina ideologias políticas detalhadas</li>
+                        <li>Crie bandeiras personalizadas ou importe suas próprias</li>
+                        <li>Desenvolva sistemas econômicos e sociais</li>
+                        <li>Faça acordos e negociações com outras nações</li>
+                        <li>Compartilhe seus projetos com a comunidade</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-// EVENTO PARA DESENHAR QUANDO CLICAR NO BOTÃO
-btnDesenhar.addEventListener('click', desenharBandeira);
+    <!-- SEÇÃO IDEOLOGIAS -->
+    <section id="ideologias" class="secao-padrao fundo-claro">
+        <div class="container">
+            <h2>Ideologias Disponíveis</h2>
+            <div class="ideologias-grid">
+                <!-- GRUPO IDEOLOGIAS REAIS -->
+                <div class="ideologia-card">
+                    <h3>Ideologias Reais</h3>
+                    <ul>
+                        <li><strong>Capitalismo</strong><br>Mercado livre e propriedade privada</li>
+                        <li><strong>Socialismo</strong><br>Distribuição equitativa de recursos</li>
+                        <li><strong>Comunismo</strong><br>Propriedade coletiva e fim das classes</li>
+                        <li><strong>Monarquia</strong><br>Liderança hereditária (absoluta/constitucional)</li>
+                        <li><strong>Ditadura Militar</strong><br>Governo controlado pelas forças armadas</li>
+                        <li><strong>Anarquismo</strong><br>Ausência de estado e cooperação voluntária</li>
+                        <li><strong>Fascismo</strong><br>Nacionalismo extremo e autoritarismo</li>
+                        <li><strong>Liberalismo</strong><br>Liberdades individuais e estado mínimo</li>
+                        <li><strong>Conservadorismo</strong><br>Valores tradicionais e ordem social</li>
+                        <li><strong>Progressismo</strong><br>Mudanças sociais e igualdade</li>
+                        <li><strong>Teocracia</strong><br>Governo liderado por autoridades religiosas</li>
+                        <li><strong>Social-Democracia</strong><br>Capitalismo regulado + estado de bem-estar</li>
+                    </ul>
+                </div>
 
-// EVENTO PARA SALVAR A BANDEIRA
-btnSalvar.addEventListener('click', () => {
-    const link = document.createElement('a');
-    link.download = `minha-bandeira-${Date.now()}.png`;
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-    alert('Bandeira salva com sucesso!');
-});
+                <!-- GRUPO IDEOLOGIAS FICTÍCIAS -->
+                <div class="ideologia-card">
+                    <h3>Ideologias Fictícias</h3>
+                    <ul>
+                        <li><strong>Technocracia Universal</strong><br>Governo por cientistas e dados</li>
+                        <li><strong>Ecologismo Profundo</strong><br>Sociedade em harmonia com a natureza</li>
+                        <li><strong>Comunhão Tribal Moderna</strong><br>Clãs + tecnologia avançada</li>
+                        <li><strong>Utopianismo Racional</strong><br>Sociedade organizada por lógica</li>
+                        <li><strong>Transumanismo Político</strong><br>Melhoria humana por tecnologia</li>
+                        <li><strong>Neofeudalismo</strong><br>Feudalismo adaptado ao mundo moderno</li>
+                        <li><strong>Galactocracia</strong><br>Governo com visão interestelar</li>
+                        <li><strong>Biocracia</strong><br>Sociedade baseada em princípios biológicos</li>
+                        <li><strong>Psicocracia</strong><br>Governo liderado por psicólogos</li>
+                        <li><strong>Cibernocracia</strong><br>Governo gerenciado por inteligências artificiais</li>
+                        <li><strong>Nomadismo Moderno</strong><br>Sociedade sem território fixo</li>
+                        <li><strong>Meritocracia Evolutiva</strong><br>Promoções baseadas em evolução pessoal</li>
+                    </ul>
+                    <p class="destaque">✓ Você pode criar sua própria ideologia no cadastro!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-// EVENTO PARA PREVISUALIZAR UPLOAD
-uploadBandeira.addEventListener('change', (e) => {
-    const arquivo = e.target.files[0];
-    if (arquivo) {
-        const leitor = new FileReader();
-        leitor.onload = (event) => {
-            previewBandeira.innerHTML = `<img src="${event.target.result}" width="250" height="150">`;
-        }
-        leitor.readAsDataURL(arquivo);
-    } else {
-        previewBandeira.innerHTML = 'Nenhuma imagem selecionada';
-    }
-});
+    <!-- SEÇÃO BANDEIRAS -->
+    <section id="bandeiras" class="secao-padrao">
+        <div class="container">
+            <h2>Crie ou Importe Sua Bandeira</h2>
+            <div class="bandeiras-container">
+                <!-- PARTE DE CRIAR BANDEIRA -->
+                <div class="bandeira-card">
+                    <h3>Criar Bandeira Personalizada</h3>
+                    
+                    <!-- CANVAS COM BORDA VISÍVEL -->
+                    <div class="canvas-container">
+                        <canvas id="canvas-bandeira" width="300" height="200"></canvas>
+                        <p class="legenda">Visualização da Bandeira</p>
+                    </div>
 
-// EVENTO PARA CONFIRMAR UPLOAD
-btnConfirmar.addEventListener('click', () => {
-    if (uploadBandeira.files.length > 0) {
-        alert('Bandeira importada com sucesso!');
-    } else {
-        alert('Selecione uma imagem primeiro!');
-    }
-});
+                    <!-- CONTROLES ORGANIZADOS EM GRID -->
+                    <div class="controles-grid">
+                        <div class="controle-item">
+                            <label>Cor de Fundo:</label>
+                            <input type="color" id="cor-fundo" value="#ffffff">
+                        </div>
 
-// EVENTO PARA MOSTRAR CAMPO DE IDEOLOGIA PRÓPRIA
-ideologiaSelecao.addEventListener('change', () => {
-    if (ideologiaSelecao.value === 'propria') {
-        formIdeologiaPropria.style.display = 'block';
-    } else {
-        formIdeologiaPropria.style.display = 'none';
-    }
-});
+                        <div class="controle-item">
+                            <label>Cor dos Símbolos:</label>
+                            <input type="color" id="cor-simbolo" value="#000000">
+                        </div>
 
-// FUNÇÃO PRINCIPAL PARA DESENHAR A BANDEIRA
-function desenharBandeira() {
-    // LIMPA O CANVAS
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        <div class="controle-item">
+                            <label>Tipo de Símbolo:</label>
+                            <select id="tipo-simbolo">
+                                <option value="estrela-5">Estrela de 5 Pontas</option>
+                                <option value="estrela-8">Estrela de 8 Pontas</option>
+                                <option value="cruz-latina">Cruz Latina</option>
+                                <option value="cruz-malta">Cruz de Malta</option>
+                                <option value="sol-clássico">Sol Clássico</option>
+                                <option value="lua-crescente">Lua Crescente</option>
+                                <option value="aguia-real">Águia Real</option>
+                                <option value="dragao-imperial">Dragão Imperial</option>
+                                <option value="flor-lotus">Flor de Lotus</option>
+                                <option value="flor-rosa">Flor de Rosa</option>
+                                <option value="escudo-medieval">Escudo Medieval</option>
+                                <option value="espada-cruzada">Espada Cruzada</option>
+                                <option value="coração-dourado">Coração Dourado</option>
+                                <option value="roda-dharma">Roda Dharma</option>
+                                <option value="livro-sagrado">Livro Sagrado</option>
+                            </select>
+                        </div>
 
-    // PINTA O FUNDO
-    ctx.fillStyle = corFundo.value;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                        <div class="controle-item">
+                            <label>Quantidade de Símbolos:</label>
+                            <input type="number" id="qtd-simbolo" min="1" max="10" value="1">
+                        </div>
 
-    // DEFINE COR DO SÍMBOLO
-    ctx.fillStyle = corSimbolo.value;
-    ctx.strokeStyle = corSimbolo.value;
+                        <div class="controle-item">
+                            <label>Tamanho dos Símbolos:</label>
+                            <input type="range" id="tamanho-simbolo" min="10" max="50" value="25">
+                            <span id="tamanho-valor">25px</span>
+                        </div>
 
-    // PEGA VALORES DOS CONTROLES
-    const tipo = tipoSimbolo.value;
-    const qtd = parseInt(qtdSimbolo.value);
-    const posicao = posicaoSimbolo.value;
+                        <div class="controle-item">
+                            <label>Posicionamento:</label>
+                            <select id="posicao-simbolo">
+                                <option value="centro">Centro Único</option>
+                                <option value="linha-horizontal">Linha Horizontal</option>
+                                <option value="linha-vertical">Linha Vertical</option>
+                                <option value="grade-2x2">Grade 2x2</option>
+                                <option value="grade-3x3">Grade 3x3</option>
+                                <option value="cantos">Nos 4 Cantos</option>
+                            </select>
+                        </div>
 
-    // POSICIONA OS SÍMBOLOS CONFORME ESCOLHA
-    switch(posicao) {
-        case 'centro':
-            desenharSimbolo(tipo, canvas.width/2, canvas.height/2, 30);
-            break;
-        case 'linha-horizontal':
-            const espacoH = canvas.width / (qtd + 1);
-            for(let i = 0; i < qtd; i++) {
-                desenharSimbolo(tipo, espacoH * (i+1), canvas.height/2, 20);
-            }
-            break;
-        case 'linha-vertical':
-            const espacoV = canvas.height / (qtd + 1);
-            for(let i = 0; i < qtd; i++) {
-                desenharSimbolo(tipo, canvas.width/2, espacoV * (i+1), 20);
-            }
-            break;
-        case 'grade':
-            const colunas = Math.ceil(Math.sqrt(qtd));
-            const linhas = Math.ceil(qtd / colunas);
-            const espacoX = canvas.width / (colunas + 1);
-            const espacoY = canvas.height / (linhas + 1);
-            let contador = 0;
-            for(let l = 0; l < linhas; l++) {
-                for(let c = 0; c < colunas; c++) {
-                    if(contador < qtd) {
-                        desenharSimbolo(tipo, espacoX * (c+1), espacoY * (l+1), 18);
-                        contador++;
-                    }
-                }
-            }
-            break;
-        case 'cantos':
-            const tamanhoCanto = 25;
-            desenharSimbolo(tipo, tamanhoCanto*2, tamanhoCanto*2, tamanhoCanto); // Canto superior esquerdo
-            desenharSimbolo(tipo, canvas.width - tamanhoCanto*2, tamanhoCanto*2, tamanhoCanto); // Canto superior direito
-            desenharSimbolo(tipo, tamanhoCanto*2, canvas.height - tamanhoCanto*2, tamanhoCanto); // Canto inferior esquerdo
-            desenharSimbolo(tipo, canvas.width - tamanhoCanto*2, canvas.height - tamanhoCanto*2, tamanhoCanto); // Canto inferior direito
-            break;
-    }
-}
+                        <div class="controle-botoes">
+                            <button id="btn-desenhar" class="btn-principal">Atualizar Bandeira</button>
+                            <button id="btn-salvar" class="btn-secundario">Salvar como PNG</button>
+                        </div>
+                    </div>
+                </div>
 
-// FUNÇÃO PARA DESENHAR CADA TIPO DE SÍMBOLO
-function desenharSimbolo(tipo, x, y, tamanho) {
-    ctx.save();
-    ctx.translate(x, y);
+                <!-- PARTE DE IMPORTAR BANDEIRA -->
+                <div class="bandeira-card">
+                    <h3>Importar Bandeira Pronta</h3>
+                    <p class="instrucao">Envie arquivos no formato PNG ou JPG (tamanho máximo: 5MB)</p>
+                    
+                    <div class="upload-area">
+                        <label for="upload-bandeira" class="btn-upload">
+                            <span>Selecionar Arquivo</span>
+                            <input type="file" id="upload-bandeira" accept="image/png, image/jpeg">
+                        </label>
+                        <p id="arquivo-selecionado">Nenhum arquivo selecionado</p>
+                    </div>
 
-    switch(tipo) {
-        case 'estrela':
-            desenharEstrela(0, 0, tamanho, 8);
-            break;
-        case 'estrela-5':
-            desenharEstrela(0, 0, tamanho, 5);
-            break;
-        case 'cruz':
-            ctx.fillRect(-tamanho/2, -tamanho/6, tamanho, tamanho/3);
-            ctx.fillRect(-tamanho/6, -tamanho/2, tamanho/3, tamanho);
-            break;
-        case 'cruz-malta':
-            ctx.beginPath();
-            ctx.moveTo(0, -tamanho);
-            ctx.lineTo(-tamanho/3, -tamanho/3);
-            ctx.lineTo(-tamanho, 0);
-            ctx.lineTo(-tamanho/3, tamanho/3);
-            ctx.lineTo(0, tamanho);
-            ctx.lineTo(tamanho/3, tamanho/3);
-            ctx.lineTo(tamanho, 0);
-            ctx.lineTo(tamanho/3, -tamanho/3);
-            ctx.closePath();
-            ctx.fill();
-            break;
-        case 'sol':
-            ctx.beginPath();
-            ctx.arc(0, 0, tamanho/2, 0, Math.PI*2);
-            ctx.fill();
-            // Raios do sol
-            for(let i = 0; i < 12; i++) {
-                ctx.rotate(Math.PI/6);
-                ctx.fillRect(0, -tamanho, tamanho/4, tamanho/2);
-            }
-            break;
-        case 'lua':
-            ctx.beginPath();
-            ctx.arc(0, 0, tamanho/2, 0.2*Math.PI, 1.8*Math.PI);
-            ctx.lineTo(0, -tamanho/4);
-            ctx.closePath();
-            ctx.fill();
-            break;
-        case 'dragao':
-            // Dragão simples
-            ctx.beginPath();
-            ctx.moveTo(-tamanho/2, 0);
-            ctx.bezierCurveTo(-tamanho/3, -tamanho/3, tamanho/3, -tamanho/3, tamanho/2, 0);
-            ctx.bezierCurveTo(tamanho/3, tamanho/3, -tamanho/3, tamanho/3, -tamanho/2, 0);
-            ctx.closePath();
-            ctx.fill();
-            // Olho
-            ctx.fillStyle = '#ffffff';
-            ctx.beginPath();
-            ctx.arc(-tamanho/6, -tamanho/6, tamanho/12, 0, Math.PI*2);
-            ctx.fill();
-            break;
-        case 'ave':
-            // Águia
-            ctx.beginPath();
-            ctx.moveTo(-tamanho/2, 0);
-            ctx.lineTo(0, -tamanho/2);
-            ctx.lineTo(tamanho/2, 0);
-            ctx.lineTo(0, tamanho/2);
-            ctx.closePath();
-            ctx.fill();
-            // Cabeça
-            ctx.beginPath();
-            ctx.arc(tamanho/2, -tamanho/4, tamanho/8, 0, Math.PI*2);
-            ctx.fill();
-            break;
-        case 'espada':
-            // Lâmina
-            ctx.beginPath();
-            ctx.moveTo(0, -tamanho/2);
-            ctx.lineTo(tamanho/4, -tamanho/4);
-            ctx.lineTo(tamanho/4, tamanho/4);
-            ctx.lineTo(0, tamanho/2);
-            ctx.closePath();
-            ctx.fill();
-            // Cabo
-            ctx.fillRect(-tamanho/6, -tamanho/6, tamanho/3, tamanho/3);
-            break;
-        case 'livro':
-            // Capa
-            ctx.fillRect(-tamanho/2, -tamanho/3, tamanho, tamanho/2);
-            // Páginas
-            ctx.fillStyle = '#ffffff';
-            ctx.fillRect(-tamanho/2 + 5, -tamanho/3 + 5, tamanho - 10, tamanho/2 - 10);
-            // Marcador
-            ctx.fillStyle = corSimbolo.value;
-            ctx.fillRect(-tamanho/2 + 10, -tamanho/3 - 5, tamanho/3, 5);
-            break;
-        case 'planta':
-            // Flor de Lotus
-            for(let i = 0; i < 8; i++) {
-                ctx.rotate(Math.PI/4);
-                ctx.beginPath();
-                ctx.moveTo(0, 0);
-                ctx.bezierCurveTo(tamanho/4, -tamanho/4, tamanho/2, 0, tamanho/4, tamanho/4);
-                ctx.closePath();
-                ctx.fill();
-            }
-            break;
-        case 'roda':
-            // Roda
-            ctx.beginPath();
-            ctx.arc(0, 0, tamanho/2, 0, Math.PI*2);
-            ctx.stroke();
-            // Raios
-            for(let i = 0; i < 8; i++) {
-                ctx.rotate(Math.PI/4);
-                ctx.beginPath();
-                ctx.moveTo(0, 0);
-                ctx.lineTo(tamanho/2, 0);
-                ctx.stroke();
-            }
-            break;
-        case 'escudo':
-            // Escudo
-            ctx.beginPath();
-            ctx.moveTo(0, -tamanho/2);
-            ctx.lineTo(tamanho/2, 0);
-            ctx.lineTo(tamanho/3, tamanho/2);
-            ctx.lineTo(-tamanho/3, tamanho/2);
-            ctx.lineTo(-tamanho/2, 0);
-            ctx.closePath();
-            ctx.fill();
-            break;
-        case 'flor':
-            // Flor de Rosas
-            for(let i = 0; i < 5; i++) {
-                ctx.rotate(Math.PI*2/5);
-                ctx.beginPath();
-                ctx.moveTo(0, 0);
-                ctx.bezierCurveTo(tamanho/4, -tamanho/4, tamanho/2, -tamanho/2, tamanho/4, 0);
-                ctx.bezierCurveTo(tamanho/2, tamanho/2, tamanho/4, tamanho/4, 0, 0);
-                ctx.closePath();
-                ctx.fill();
-            }
-            break;
-        case 'raio':
-            // Raio
-            ctx.beginPath();
-            ctx.moveTo(-tamanho/2, -tamanho/2);
-            ctx.lineTo(tamanho/2, 0);
-            ctx.lineTo(-tamanho/2, tamanho/2);
-            ctx.lineTo(-tamanho/4, 0);
-            ctx.closePath();
-            ctx.fill();
-            break;
-        case 'triangulo':
-            ctx.beginPath();
-            ctx.moveTo(0, -tamanho/2);
-            ctx.lineTo(tamanho/2, tamanho/2);
-            ctx.lineTo(-tamanho/2, tamanho/2);
-            ctx.closePath();
-            ctx.fill();
-            break;
-        case 'circulo':
-            ctx.beginPath();
-            ctx.arc(0, 0, tamanho/2, 0, Math.PI*2);
-            ctx.fill();
-            break;
-        case 'quadrado':
-            ctx.fillRect(-tamanho/2, -tamanho/2, tamanho, tamanho);
-            break;
-        case 'coração':
-            ctx.beginPath();
-            ctx.moveTo(0, -tamanho/4);
-            ctx.bezierCurveTo(-tamanho/2, -tamanho/2, -tamanho/2, tamanho/4, 0, tamanho/2);
-            ctx.bezierCurveTo(tamanho/2, tamanho/4, tamanho/2, -tamanho/2, 0, -tamanho/4);
-            ctx.closePath();
-            ctx.fill();
-            break;
-        case 'chave':
-            // Cabo da chave
-            ctx.fillRect(-tamanho/6, -tamanho/2, tamanho/3, tamanho/2);
-            // Corpo
-            ctx.fillRect(-tamanho/2, 0, tamanho, tamanho/6);
-            // Garras
-            ctx.fillRect(-tamanho/2, 0, tamanho/6, tamanho/3);
-            ctx.fillRect(tamanho/2 - tamanho/6, 0, tamanho/6, tamanho/3);
-            break;
-    }
+                    <div class="preview-container">
+                        <p>Pré-visualização:</p>
+                        <div id="preview-bandeira">
+                            <img src="https://via.placeholder.com/300x200?text=Nenhuma+Imagem" alt="Pré-visualização" id="preview-imagem">
+                        </div>
+                    </div>
 
-    ctx.restore();
-}
+                    <button id="btn-confirmar-upload" class="btn-principal">Confirmar Importação</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-// FUNÇÃO PARA DESENHAR ESTRELAS
-function desenharEstrela(x, y, raio, pontas) {
-    ctx.beginPath();
-    for(let i = 0; i < pontas*2; i++) {
-        const angulo = (i * Math.PI / pontas) - Math.PI/2;
-        const distancia = (i % 2 === 0) ? raio : raio/2;
-        const px = x + Math.cos(angulo) * distancia;
-        const py = y + Math.sin(angulo) * distancia;
-        if(i === 0) ctx.moveTo(px, py);
-        else ctx.lineTo(px, py);
-    }
-    ctx.closePath();
-    ctx.fill();
-}
+    <!-- SEÇÃO PROJETOS -->
+    <section id="projetos" class="secao-padrao fundo-claro">
+        <div class="container">
+            <h2>Projetos Exemplos</h2>
+            <div class="projetos-grid">
+                <!-- PROJETO 1 -->
+                <div class="projeto-card">
+                    <div class="projeto-imagem">
+                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Valdris" alt="Bandeira do Império de Valdris">
+                    </div>
+                    <h3>Império de Valdris</h3>
+                    <p class="ideologia">Ideologia: Monarquia Constitucional</p>
+                    <p class="descricao">
+                        Um império com mais de 500 anos de história, conhecido por sua arquitetura medieval 
+                        e sistema de nobreza organizado.
+                    </p>
+                    <button class="btn-secundario">Ver Detalhes</button>
+                </div>
+
+                <!-- PROJETO 2 -->
+                <div class="projeto-card">
+                    <div class="projeto-imagem">
+                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Auroria" alt="Bandeira da República Socialista de Auroria">
+                    </div>
+                    <h3>República Socialista de Auroria</h3>
+                    <p class="ideologia">Ideologia: Social-Democracia</p>
+                    <p class="descricao">
+                        Uma nação pioneira em energia limpa, com foco em igualdade de gênero e direitos humanos.
+                    </p>
+                    <button class="btn-secundario">Ver Detalhes</button>
+                </div>
+
+                <!-- PROJETO 3 -->
+                <div class="projeto-card">
+                    <div class="projeto-imagem">
+                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Kharos" alt="Bandeira do Estado de Kharos">
+                    </div>
+                    <h3>Estado de Kharos</h3>
+                    <p class="ideologia">Ideologia: Technocracia Universal</p>
+                    <p class="descricao">
+                        Uma nação governada por inteligências artificiais e cientistas, com tecnologia avançada.
+                    </p>
+                    <button class="btn-secundario">Ver Detalhes</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CADASTRO -->
+    <section id="cadastro" class="secao-padrao">
+        <div class="container">
+            <h2>Cadastre-se e Crie Sua Nação</h2>
+            <form class="form-cadastro">
+                <div class="form-grid">
+                    <div class="form-item">
+                        <label>Nome da Nação *</label>
+                        <input type="text" placeholder="Ex: Império de Valdris" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label>Sigla da Nação (opcional)</label>
+                        <input type="text" placeholder="Ex: VAL">
+                    </div>
+
+                    <div class="form-item">
+                        <label>Ideologia Política *</label>
+                        <select id="ideologia-selecao" required>
+                            <option value="">Selecione uma opção</option>
+                            <!-- IDEOLOGIAS REAIS -->
+                            <option value="capitalismo">Capitalismo</option>
+                            <option value="socialismo">Socialismo</option>
+                            <option value="comunismo">Comunismo</option>
+                            <option value="monarquia">Monarquia</option>
+                            <option value="ditadura-militar">Ditadura Militar</option>
+                            <option value="anarquismo">Anarquismo</option>
+                            <option value="fascismo">Fascismo</option>
+                            <option value="liberalismo">Liberalismo</option>
+                            <option value="conservadorismo">Conservadorismo</option>
+                            <option value="progressismo">Progressismo</option>
+                            <option value="teocracia">Teocracia</option>
+                            <option value="social-democracia">Social-Democracia</option>
+                            <!-- IDEOLOGIAS FICTÍCIAS -->
+                            <option value="technocracia-universal">Technocracia Universal</option>
+                            <option value="ecologismo-profundo">Ecologismo Profundo</option>
+                            <option value="comunhao-tribal">Comunhão Tribal Moderna</option>
+                            <option value="utopianismo-racional">Utopianismo Racional</option>
+                            <option value="transumanismo-polit
