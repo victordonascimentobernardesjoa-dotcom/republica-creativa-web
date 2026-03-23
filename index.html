@@ -7,269 +7,293 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="inicio">
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#ideologias">Ideologias</a></li>
-                <li><a href="#bandeiras">Criar Bandeira</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#cadastro">Cadastro</a></li>
-            </ul>
-        </nav>
-
-        <h1>República Criativa Web</h1>
-        <p>Crie nações fictícias com ideologias e bandeiras únicas!</p>
-        <a href="#cadastro" class="btn">Começar Agora</a>
+    <!-- CABEÇALHO FIXO E ORGANIZADO -->
+    <header>
+        <div class="container">
+            <h1>República Criativa Web</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#ideologias">Ideologias</a></li>
+                    <li><a href="#bandeiras">Bandeiras</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#cadastro">Cadastro</a></li>
+                </ul>
+            </nav>
+            <a href="#cadastro" class="btn-principal">Começar Agora</a>
+        </div>
     </header>
 
-    <section id="sobre">
-        <h2>Sobre o Projeto</h2>
-        <p>Crie nações fictícias completas com todos os elementos de um país real:</p>
-        <ul>
-            <li>Ideologias políticas variadas (reais ou criadas por você)</li>
-            <li>Moedas, economia e recursos naturais</li>
-            <li>Bandeiras personalizadas (crie ou faça upload)</li>
-            <li>Leis, acordos comerciais e interação com a comunidade!</li>
-        </ul>
-        <button class="btn">Saiba Mais</button>
-    </section>
-
-    <section id="ideologias">
-        <h2>Ideologias Disponíveis</h2>
-        
-        <div class="ideologia-grupo">
-            <h3>Ideologias Reais</h3>
-            <ul>
-                <li><strong>Capitalismo</strong> — Mercado livre e propriedade privada</li>
-                <li><strong>Socialismo</strong> — Distribuição equitativa de recursos</li>
-                <li><strong>Comunismo</strong> — Propriedade coletiva e fim das classes</li>
-                <li><strong>Monarquia</strong> — Liderança hereditária (absoluta/constitucional)</li>
-                <li><strong>Ditadura Militar</strong> — Governo controlado pelas forças armadas</li>
-                <li><strong>Anarquismo</strong> — Ausência de estado e cooperação voluntária</li>
-                <li><strong>Fascismo</strong> — Nacionalismo extremo e autoritarismo</li>
-                <li><strong>Liberalismo</strong> — Liberdades individuais e estado mínimo</li>
-                <li><strong>Conservadorismo</strong> — Valores tradicionais e ordem social</li>
-                <li><strong>Progressismo</strong> — Mudanças sociais e igualdade</li>
-                <li><strong>Teocracia</strong> — Governo liderado por autoridades religiosas</li>
-                <li><strong>Colonialismo</strong> — Expansão territorial e domínio</li>
-                <li><strong>Imperialismo</strong> — Expansão econômica e política</li>
-                <li><strong>Populismo</strong> — Apoio ao povo contra elites</li>
-                <li><strong>Nacionalismo</strong> — Prioridade aos interesses da nação</li>
-                <li><strong>Internacionalismo</strong> — Cooperação entre países</li>
-                <li><strong>Ecologismo Político</strong> — Proteção do meio ambiente</li>
-                <li><strong>Meritocracia</strong> — Cargos por mérito e capacidade</li>
-                <li><strong>Social-democracia</strong> — Capitalismo regulado + estado de bem-estar</li>
-                <li><strong>Libertarianismo</strong> — Liberdade individual máxima</li>
-            </ul>
-        </div>
-
-        <div class="ideologia-grupo">
-            <h3>Ideologias Fictícias</h3>
-            <ul>
-                <li><strong>Technocracia Universal</strong> — Governo por cientistas e dados</li>
-                <li><strong>Ecologismo Profundo</strong> — Sociedade em harmonia com a natureza</li>
-                <li><strong>Comunhão Tribal Moderna</strong> — Clãs + tecnologia avançada</li>
-                <li><strong>Utopianismo Racional</strong> — Sociedade organizada por lógica</li>
-                <li><strong>Transumanismo Político</strong> — Melhoria humana por tecnologia</li>
-                <li><strong>Neofeudalismo</strong> — Feudalismo adaptado ao mundo moderno</li>
-                <li><strong>Galactocracia</strong> — Governo com visão interestelar</li>
-                <li><strong>Biocracia</strong> — Sociedade baseada em princípios biológicos</li>
-                <li><strong>Psicocracia</strong> — Governo liderado por psicólogos e mentais</li>
-            </ul>
-            <p>Você pode criar sua própria ideologia no cadastro!</p>
+    <!-- SEÇÃO INICIAL -->
+    <section id="inicio" class="secao-hero">
+        <div class="container">
+            <h2>Crie Nações Fictícias <span>Completas</span></h2>
+            <p>Desenvolva países com ideologias, bandeiras e sistemas políticos únicos!</p>
+            <div class="hero-botoes">
+                <a href="#bandeiras" class="btn-principal">Criar Bandeira</a>
+                <a href="#ideologias" class="btn-secundario">Ver Ideologias</a>
+            </div>
         </div>
     </section>
 
-    <section id="bandeiras">
-        <h2>Crie ou Importe Sua Bandeira</h2>
-        
-        <div class="bandeira-container">
-            <!-- PARTE DE CRIAR BANDEIRA -->
-            <div class="bandeira-opcao">
-                <h3>Criar Bandeira Personalizada</h3>
-                
-                <!-- CANVAS VISÍVEL -->
-                <div class="canvas-box">
-                    <canvas id="canvas-bandeira" width="250" height="150"></canvas>
-                </div>
-
-                <!-- CONTROLES ORGANIZADOS -->
-                <div class="controles-box">
-                    <div class="controle-item">
-                        <label>Cor de Fundo:</label>
-                        <input type="color" id="cor-fundo" value="#ffffff">
-                    </div>
-
-                    <div class="controle-item">
-                        <label>Cor do Símbolo:</label>
-                        <input type="color" id="cor-simbolo" value="#000000">
-                    </div>
-
-                    <div class="controle-item">
-                        <label>Escolha o Símbolo:</label>
-                        <select id="tipo-simbolo">
-                            <option value="estrela">Estrela</option>
-                            <option value="estrela-5">Estrela de 5 Pontas</option>
-                            <option value="cruz">Cruz</option>
-                            <option value="cruz-malta">Cruz de Malta</option>
-                            <option value="sol">Sol</option>
-                            <option value="lua">Lua Crescente</option>
-                            <option value="dragao">Dragão</option>
-                            <option value="ave">Águia</option>
-                            <option value="espada">Espada</option>
-                            <option value="livro">Livro</option>
-                            <option value="planta">Flor de Lotus</option>
-                            <option value="roda">Roda</option>
-                            <option value="escudo">Escudo</option>
-                            <option value="flor">Flor de Rosas</option>
-                            <option value="raio">Raio</option>
-                            <option value="triangulo">Triângulo</option>
-                            <option value="circulo">Círculo</option>
-                            <option value="quadrado">Quadrado</option>
-                            <option value="coração">Coração</option>
-                            <option value="chave">Chave</option>
-                        </select>
-                    </div>
-
-                    <div class="controle-item">
-                        <label>Quantidade:</label>
-                        <input type="number" id="qtd-simbolo" min="1" max="15" value="1">
-                    </div>
-
-                    <div class="controle-item">
-                        <label>Posição:</label>
-                        <select id="posicao-simbolo">
-                            <option value="centro">Centro</option>
-                            <option value="linha-horizontal">Linha Horizontal</option>
-                            <option value="linha-vertical">Linha Vertical</option>
-                            <option value="grade">Grade</option>
-                            <option value="cantos">Cantos</option>
-                        </select>
-                    </div>
-
-                    <div class="controle-botoes">
-                        <button id="btn-desenhar" class="btn">Desenhar Bandeira</button>
-                        <button id="btn-salvar" class="btn">Salvar Bandeira</button>
-                    </div>
+    <!-- SEÇÃO SOBRE -->
+    <section id="sobre" class="secao-padrao">
+        <div class="container">
+            <h2>Sobre o Projeto</h2>
+            <div class="sobre-conteudo">
+                <div class="sobre-texto">
+                    <p>
+                        A República Criativa Web é uma plataforma completa para quem ama construir mundos fictícios. 
+                        Crie nações com todos os elementos de um país real e interaja com uma comunidade apaixonada!
+                    </p>
+                    <ul>
+                        <li>Defina ideologias políticas detalhadas</li>
+                        <li>Crie bandeiras personalizadas ou importe suas próprias</li>
+                        <li>Desenvolva sistemas econômicos e sociais</li>
+                        <li>Faça acordos e negociações com outras nações</li>
+                        <li>Compartilhe seus projetos com a comunidade</li>
+                    </ul>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- PARTE DE IMPORTAR BANDEIRA -->
-            <div class="bandeira-opcao">
-                <h3>Importar Bandeira Pronta</h3>
-                <p>Envie PNG ou JPG (até 5MB):</p>
-                
-                <input type="file" id="upload-bandeira" accept="image/png, image/jpeg">
-                
-                <div class="preview-box">
-                    <p>Pré-visualização:</p>
-                    <div id="preview-bandeira">Nenhuma imagem selecionada</div>
+    <!-- SEÇÃO IDEOLOGIAS -->
+    <section id="ideologias" class="secao-padrao fundo-claro">
+        <div class="container">
+            <h2>Ideologias Disponíveis</h2>
+            <div class="ideologias-grid">
+                <!-- GRUPO IDEOLOGIAS REAIS -->
+                <div class="ideologia-card">
+                    <h3>Ideologias Reais</h3>
+                    <ul>
+                        <li><strong>Capitalismo</strong><br>Mercado livre e propriedade privada</li>
+                        <li><strong>Socialismo</strong><br>Distribuição equitativa de recursos</li>
+                        <li><strong>Comunismo</strong><br>Propriedade coletiva e fim das classes</li>
+                        <li><strong>Monarquia</strong><br>Liderança hereditária (absoluta/constitucional)</li>
+                        <li><strong>Ditadura Militar</strong><br>Governo controlado pelas forças armadas</li>
+                        <li><strong>Anarquismo</strong><br>Ausência de estado e cooperação voluntária</li>
+                        <li><strong>Fascismo</strong><br>Nacionalismo extremo e autoritarismo</li>
+                        <li><strong>Liberalismo</strong><br>Liberdades individuais e estado mínimo</li>
+                        <li><strong>Conservadorismo</strong><br>Valores tradicionais e ordem social</li>
+                        <li><strong>Progressismo</strong><br>Mudanças sociais e igualdade</li>
+                        <li><strong>Teocracia</strong><br>Governo liderado por autoridades religiosas</li>
+                        <li><strong>Social-Democracia</strong><br>Capitalismo regulado + estado de bem-estar</li>
+                    </ul>
                 </div>
 
-                <button id="btn-confirmar" class="btn">Confirmar Importação</button>
+                <!-- GRUPO IDEOLOGIAS FICTÍCIAS -->
+                <div class="ideologia-card">
+                    <h3>Ideologias Fictícias</h3>
+                    <ul>
+                        <li><strong>Technocracia Universal</strong><br>Governo por cientistas e dados</li>
+                        <li><strong>Ecologismo Profundo</strong><br>Sociedade em harmonia com a natureza</li>
+                        <li><strong>Comunhão Tribal Moderna</strong><br>Clãs + tecnologia avançada</li>
+                        <li><strong>Utopianismo Racional</strong><br>Sociedade organizada por lógica</li>
+                        <li><strong>Transumanismo Político</strong><br>Melhoria humana por tecnologia</li>
+                        <li><strong>Neofeudalismo</strong><br>Feudalismo adaptado ao mundo moderno</li>
+                        <li><strong>Galactocracia</strong><br>Governo com visão interestelar</li>
+                        <li><strong>Biocracia</strong><br>Sociedade baseada em princípios biológicos</li>
+                        <li><strong>Psicocracia</strong><br>Governo liderado por psicólogos</li>
+                        <li><strong>Cibernocracia</strong><br>Governo gerenciado por inteligências artificiais</li>
+                        <li><strong>Nomadismo Moderno</strong><br>Sociedade sem território fixo</li>
+                        <li><strong>Meritocracia Evolutiva</strong><br>Promoções baseadas em evolução pessoal</li>
+                    </ul>
+                    <p class="destaque">✓ Você pode criar sua própria ideologia no cadastro!</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projetos">
-        <h2>Projetos Exemplos</h2>
-        
-        <div class="projeto-card">
-            <img src="https://via.placeholder.com/250x150?text=Bandeira+Valdris" alt="Bandeira do Império de Valdris">
-            <h3>Império de Valdris</h3>
-            <p>Ideologia: Monarquia Constitucional</p>
-            <button class="btn">Ver Detalhes</button>
-        </div>
-        
-        <div class="projeto-card">
-            <img src="https://via.placeholder.com/250x150?text=Bandeira+Auroria" alt="Bandeira da República Socialista de Auroria">
-            <h3>República Socialista de Auroria</h3>
-            <p>Ideologia: Social-democracia</p>
-            <button class="btn">Ver Detalhes</button>
-        </div>
-        
-        <div class="projeto-card">
-            <img src="https://via.placeholder.com/250x150?text=Bandeira+Kharos" alt="Bandeira do Estado de Kharos">
-            <h3>Estado de Kharos</h3>
-            <p>Ideologia: Technocracia Universal</p>
-            <button class="btn">Ver Detalhes</button>
+    <!-- SEÇÃO BANDEIRAS -->
+    <section id="bandeiras" class="secao-padrao">
+        <div class="container">
+            <h2>Crie ou Importe Sua Bandeira</h2>
+            <div class="bandeiras-container">
+                <!-- PARTE DE CRIAR BANDEIRA -->
+                <div class="bandeira-card">
+                    <h3>Criar Bandeira Personalizada</h3>
+                    
+                    <!-- CANVAS COM BORDA VISÍVEL -->
+                    <div class="canvas-container">
+                        <canvas id="canvas-bandeira" width="300" height="200"></canvas>
+                        <p class="legenda">Visualização da Bandeira</p>
+                    </div>
+
+                    <!-- CONTROLES ORGANIZADOS EM GRID -->
+                    <div class="controles-grid">
+                        <div class="controle-item">
+                            <label>Cor de Fundo:</label>
+                            <input type="color" id="cor-fundo" value="#ffffff">
+                        </div>
+
+                        <div class="controle-item">
+                            <label>Cor dos Símbolos:</label>
+                            <input type="color" id="cor-simbolo" value="#000000">
+                        </div>
+
+                        <div class="controle-item">
+                            <label>Tipo de Símbolo:</label>
+                            <select id="tipo-simbolo">
+                                <option value="estrela-5">Estrela de 5 Pontas</option>
+                                <option value="estrela-8">Estrela de 8 Pontas</option>
+                                <option value="cruz-latina">Cruz Latina</option>
+                                <option value="cruz-malta">Cruz de Malta</option>
+                                <option value="sol-clássico">Sol Clássico</option>
+                                <option value="lua-crescente">Lua Crescente</option>
+                                <option value="aguia-real">Águia Real</option>
+                                <option value="dragao-imperial">Dragão Imperial</option>
+                                <option value="flor-lotus">Flor de Lotus</option>
+                                <option value="flor-rosa">Flor de Rosa</option>
+                                <option value="escudo-medieval">Escudo Medieval</option>
+                                <option value="espada-cruzada">Espada Cruzada</option>
+                                <option value="coração-dourado">Coração Dourado</option>
+                                <option value="roda-dharma">Roda Dharma</option>
+                                <option value="livro-sagrado">Livro Sagrado</option>
+                            </select>
+                        </div>
+
+                        <div class="controle-item">
+                            <label>Quantidade de Símbolos:</label>
+                            <input type="number" id="qtd-simbolo" min="1" max="10" value="1">
+                        </div>
+
+                        <div class="controle-item">
+                            <label>Tamanho dos Símbolos:</label>
+                            <input type="range" id="tamanho-simbolo" min="10" max="50" value="25">
+                            <span id="tamanho-valor">25px</span>
+                        </div>
+
+                        <div class="controle-item">
+                            <label>Posicionamento:</label>
+                            <select id="posicao-simbolo">
+                                <option value="centro">Centro Único</option>
+                                <option value="linha-horizontal">Linha Horizontal</option>
+                                <option value="linha-vertical">Linha Vertical</option>
+                                <option value="grade-2x2">Grade 2x2</option>
+                                <option value="grade-3x3">Grade 3x3</option>
+                                <option value="cantos">Nos 4 Cantos</option>
+                            </select>
+                        </div>
+
+                        <div class="controle-botoes">
+                            <button id="btn-desenhar" class="btn-principal">Atualizar Bandeira</button>
+                            <button id="btn-salvar" class="btn-secundario">Salvar como PNG</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PARTE DE IMPORTAR BANDEIRA -->
+                <div class="bandeira-card">
+                    <h3>Importar Bandeira Pronta</h3>
+                    <p class="instrucao">Envie arquivos no formato PNG ou JPG (tamanho máximo: 5MB)</p>
+                    
+                    <div class="upload-area">
+                        <label for="upload-bandeira" class="btn-upload">
+                            <span>Selecionar Arquivo</span>
+                            <input type="file" id="upload-bandeira" accept="image/png, image/jpeg">
+                        </label>
+                        <p id="arquivo-selecionado">Nenhum arquivo selecionado</p>
+                    </div>
+
+                    <div class="preview-container">
+                        <p>Pré-visualização:</p>
+                        <div id="preview-bandeira">
+                            <img src="https://via.placeholder.com/300x200?text=Nenhuma+Imagem" alt="Pré-visualização" id="preview-imagem">
+                        </div>
+                    </div>
+
+                    <button id="btn-confirmar-upload" class="btn-principal">Confirmar Importação</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="cadastro">
-        <h2>Cadastre-se e Crie Sua Nação</h2>
-        <form>
-            <div class="form-item">
-                <label>Nome da Nação:</label>
-                <input type="text" placeholder="Ex: Império de Valdris" required>
-            </div>
+    <!-- SEÇÃO PROJETOS -->
+    <section id="projetos" class="secao-padrao fundo-claro">
+        <div class="container">
+            <h2>Projetos Exemplos</h2>
+            <div class="projetos-grid">
+                <!-- PROJETO 1 -->
+                <div class="projeto-card">
+                    <div class="projeto-imagem">
+                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Valdris" alt="Bandeira do Império de Valdris">
+                    </div>
+                    <h3>Império de Valdris</h3>
+                    <p class="ideologia">Ideologia: Monarquia Constitucional</p>
+                    <p class="descricao">
+                        Um império com mais de 500 anos de história, conhecido por sua arquitetura medieval 
+                        e sistema de nobreza organizado.
+                    </p>
+                    <button class="btn-secundario">Ver Detalhes</button>
+                </div>
 
-            <div class="form-item">
-                <label>Ideologia:</label>
-                <select id="ideologia-selecao" required>
-                    <option value="">Escolha uma opção</option>
-                    <!-- IDEOLOGIAS REAIS -->
-                    <option value="capitalismo">Capitalismo</option>
-                    <option value="socialismo">Socialismo</option>
-                    <option value="comunismo">Comunismo</option>
-                    <option value="monarquia">Monarquia</option>
-                    <option value="ditadura-militar">Ditadura Militar</option>
-                    <option value="anarquismo">Anarquismo</option>
-                    <option value="fascismo">Fascismo</option>
-                    <option value="liberalismo">Liberalismo</option>
-                    <option value="conservadorismo">Conservadorismo</option>
-                    <option value="progressismo">Progressismo</option>
-                    <option value="teocracia">Teocracia</option>
-                    <option value="colonialismo">Colonialismo</option>
-                    <option value="imperialismo">Imperialismo</option>
-                    <option value="populismo">Populismo</option>
-                    <option value="nacionalismo">Nacionalismo</option>
-                    <option value="internacionalismo">Internacionalismo</option>
-                    <option value="ecologismo-politico">Ecologismo Político</option>
-                    <option value="meritocracia">Meritocracia</option>
-                    <option value="social-democracia">Social-democracia</option>
-                    <option value="libertarianismo">Libertarianismo</option>
-                    <!-- IDEOLOGIAS FICTÍCIAS -->
-                    <option value="technocracia-universal">Technocracia Universal</option>
-                    <option value="ecologismo-profundo">Ecologismo Profundo</option>
-                    <option value="comunhao-tribal">Comunhão Tribal Moderna</option>
-                    <option value="utopianismo-racional">Utopianismo Racional</option>
-                    <option value="transumanismo-politico">Transumanismo Político</option>
-                    <option value="neofeudalismo">Neofeudalismo</option>
-                    <option value="galactocracia">Galactocracia</option>
-                    <option value="biocracia">Biocracia</option>
-                    <option value="psicocracia">Psicocracia</option>
-                    <option value="propria">Criar Minha Própria Ideologia</option>
-                </select>
-            </div>
+                <!-- PROJETO 2 -->
+                <div class="projeto-card">
+                    <div class="projeto-imagem">
+                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Auroria" alt="Bandeira da República Socialista de Auroria">
+                    </div>
+                    <h3>República Socialista de Auroria</h3>
+                    <p class="ideologia">Ideologia: Social-Democracia</p>
+                    <p class="descricao">
+                        Uma nação pioneira em energia limpa, com foco em igualdade de gênero e direitos humanos.
+                    </p>
+                    <button class="btn-secundario">Ver Detalhes</button>
+                </div>
 
-            <div id="form-ideologia-propria" style="display: none;">
-                <label>Descreva Sua Ideologia:</label>
-                <textarea rows="4" placeholder="Explique os princípios e funcionamento..."></textarea>
+                <!-- PROJETO 3 -->
+                <div class="projeto-card">
+                    <div class="projeto-imagem">
+                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Kharos" alt="Bandeira do Estado de Kharos">
+                    </div>
+                    <h3>Estado de Kharos</h3>
+                    <p class="ideologia">Ideologia: Technocracia Universal</p>
+                    <p class="descricao">
+                        Uma nação governada por inteligências artificiais e cientistas, com tecnologia avançada.
+                    </p>
+                    <button class="btn-secundario">Ver Detalhes</button>
+                </div>
             </div>
-
-            <div class="form-item">
-                <label>Bandeira da Nação:</label>
-                <p>Escolha entre criar acima ou fazer upload:</p>
-                <input type="file" accept="image/png, image/jpeg">
-            </div>
-
-            <div class="form-item">
-                <label>Email:</label>
-                <input type="email" required>
-            </div>
-
-            <button type="submit" class="btn">Criar Minha Nação</button>
-        </form>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2026 República Criativa Web - Todos os direitos reservados</p>
-        <p>Email: contato@republicacriativaweb.com.br</p>
-    </footer>
+    <!-- SEÇÃO CADASTRO -->
+    <section id="cadastro" class="secao-padrao">
+        <div class="container">
+            <h2>Cadastre-se e Crie Sua Nação</h2>
+            <form class="form-cadastro">
+                <div class="form-grid">
+                    <div class="form-item">
+                        <label>Nome da Nação *</label>
+                        <input type="text" placeholder="Ex: Império de Valdris" required>
+                    </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+                    <div class="form-item">
+                        <label>Sigla da Nação (opcional)</label>
+                        <input type="text" placeholder="Ex: VAL">
+                    </div>
+
+                    <div class="form-item">
+                        <label>Ideologia Política *</label>
+                        <select id="ideologia-selecao" required>
+                            <option value="">Selecione uma opção</option>
+                            <!-- IDEOLOGIAS REAIS -->
+                            <option value="capitalismo">Capitalismo</option>
+                            <option value="socialismo">Socialismo</option>
+                            <option value="comunismo">Comunismo</option>
+                            <option value="monarquia">Monarquia</option>
+                            <option value="ditadura-militar">Ditadura Militar</option>
+                            <option value="anarquismo">Anarquismo</option>
+                            <option value="fascismo">Fascismo</option>
+                            <option value="liberalismo">Liberalismo</option>
+                            <option value="conservadorismo">Conservadorismo</option>
+                            <option value="progressismo">Progressismo</option>
+                            <option value="teocracia">Teocracia</option>
+                            <option value="social-democracia">Social-Democracia</option>
+                            <!-- IDEOLOGIAS FICTÍCIAS -->
+                            <option value="technocracia-universal">Technocracia Universal</option>
+                            <option value="ecologismo-profundo">Ecologismo Profundo</option>
+                            <option value="comunhao-tribal">Comunhão Tribal Moderna</option>
+                            <option value="utopianismo-racional">Utopianismo Racional</option>
+                            <option value="transumanismo-polit
