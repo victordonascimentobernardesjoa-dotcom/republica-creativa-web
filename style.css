@@ -1,60 +1,355 @@
+/* RESET GERAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    background-color: #f0f4f8;
+/* CONTAINER PRINCIPAL */
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 /* CABEÇALHO */
 header {
-    background-color: #2b6cb0;
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-    border-radius: 8px;
-    margin-bottom: 30px;
+    background-color: #1a4a7a;
+    color: #ffffff;
+    padding: 25px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 20px;
-    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
 header nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 8px 12px;
-    border-radius: 4px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 header nav a:hover {
-    background-color: #1a4a7a;
+    background-color: #0f355c;
 }
 
-/* BOTÕES UNIFORMES */
-.btn {
-    background-color: #1a4a7a;
-    color: white;
+/* BOTÕES */
+.btn-principal, .btn-secundario {
     border: none;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border-radius: 6px;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    max-width: 200px;
+    transition: background-color 0.3s ease;
     text-align: center;
 }
 
-.btn:hover 
+.btn-principal {
+    background-color: #1a4a7a;
+    color: #ffffff;
+}
+
+.btn-principal:hover {
+    background-color: #0f355c;
+}
+
+.btn-secundario {
+    background-color: #2b6cb0;
+    color: #ffffff;
+}
+
+.btn-secundario:hover {
+    background-color: #1a4a7a;
+}
+
+/* SEÇÕES GERAIS */
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    color: #1a4a7a;
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #2b6cb0;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* SEÇÃO INICIAL */
+#inicio {
+    background-color: #f0f4f8;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#inicio h2 {
+    font-size: 2rem;
+    color: #1a4a7a;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: #555555;
+}
+
+/* SEÇÃO SOBRE */
+#sobre {
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+#sobre .conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+#sobre .texto {
+    color: #333333;
+}
+
+#sobre .texto h3 {
+    color: #1a4a7a;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+#sobre .texto p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+/* SEÇÃO IDEOLOGIAS */
+#ideologias {
+    background-color: #f8fafc;
+}
+
+.ideologias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.ideologia-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ideologia-card h3 {
+    color: #1a4a7a;
+    margin-bottom: 15px;
+}
+
+.ideologia-card ul {
+    list-style: none;
+}
+
+.ideologia-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555555;
+}
+
+.ideologia-card li strong {
+    color: #1a4a7a;
+}
+
+/* SEÇÃO BANDEIRAS */
+#bandeiras {
+    background-color: #ffffff;
+}
+
+.bandeiras-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* CANVAS */
+#canvas-bandeira {
+    border: 2px solid #1a4a7a;
+    background-color: #ffffff;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* CONTROLES DA BANDEIRA */
+.controles-bandeira {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+}
+
+.controle-item {
+    margin-bottom: 15px;
+}
+
+.controle-item label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1a4a7a;
+    font-weight: 600;
+}
+
+.controle-item input, .controle-item select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* SEÇÃO PROJETOS */
+#projetos {
+    background-color: #f8fafc;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.projeto-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.projeto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.projeto-card h3 {
+    color: #1a4a7a;
+    margin-bottom: 10px;
+}
+
+.projeto-card p {
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+/* SEÇÃO CADASTRO */
+#cadastro {
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-cadastro {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-item {
+    margin-bottom: 20px;
+}
+
+.form-item label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1a4a7a;
+    font-weight: 600;
+}
+
+.form-item input, .form-item select, .form-item textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-item textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #1a4a7a;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 992px) {
+    #sobre .conteudo {
+        grid-template-columns: 1fr;
+    }
+    
+    .bandeiras-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    header nav ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    section h2 {
+        font-size: 1.4rem;
+    }
+    
+    .controles-bandeira {
+        padding: 15px;
+    }
+}
