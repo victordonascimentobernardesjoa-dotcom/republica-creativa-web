@@ -1,7 +1,14 @@
-// INICIALIZAÇÃO DO CANVAS
-const canvas = document.getElementById('canvas-bandeira');
-if (canvas) {
+// INICIALIZAÇÃO GLOBAL
+document.addEventListener('DOMContentLoaded', function() {
+    // CONFIGURAÇÃO DO CANVAS
+    const canvas = document.getElementById('canvas-bandeira');
     const ctx = canvas.getContext('2d');
+
+    // DEFINIR DIMENSÕES FIXAS E VISÍVEIS
+    canvas.width = 300;
+    canvas.height = 200;
+    canvas.style.width = '300px';
+    canvas.style.height = '200px';
 
     // ELEMENTOS DE CONTROLE
     const corFundo = document.getElementById('cor-fundo');
@@ -9,150 +16,48 @@ if (canvas) {
     const tipoSimbolo = document.getElementById('tipo-simbolo');
     const qtdSimbolo = document.getElementById('qtd-simbolo');
     const tamanhoSimbolo = document.getElementById('tamanho-simbolo');
+    const tamanhoValor = document.getElementById('tamanho-valor');
+    const posicaoSimbolo = document.getElementById('posicao-simbolo');
     const btnDesenhar = document.getElementById('btn-desenhar');
     const btnSalvar = document.getElementById('btn-salvar');
+    const uploadBandeira = document.getElementById('upload-bandeira');
+    const arquivoSelecionado = document.getElementById('arquivo-selecionado');
+    const previewImagem = document.getElementById('preview-imagem');
+    const btnConfirmarUpload = document.getElementById('btn-confirmar-upload');
+    const ideologiaSelecao = document.getElementById('ideologia-selecao');
+    const formIdeologiaPropria = document.getElementById('form-ideologia-propria');
 
-    // DEFINIR TAMANHO PADRÃO
-    canvas.width = 300;
-    canvas.height = 200;
+    // ATUALIZAR VALOR DO TAMANHO
+    tamanhoSimbolo.addEventListener('input', function() {
+        tamanhoValor.textContent = `${this.value}px`;
+    });
 
-    // FUNÇÃO PARA DESENHAR SÍMBOLOS PROFISSIONAIS
-    function desenharSimbolo(tipo, tamanho, cor) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = cor;
+    // DESENHAR BANDEIRA INICIAL
+    desenharBandeira();
 
-        switch(tipo) {
-            case 'estrela':
-                desenharEstrela(tamanho, cor);
-                break;
-            case 'cruz':
-                desenharCruz(tamanho, cor);
-                break;
-            case 'sol':
-                desenharSol(tamanho, cor);
-                break;
-            case 'lua':
-                desenharLua(tamanho, cor);
-                break;
-            case 'aguia':
-                desenharAguia(tamanho, cor);
-                break;
-            case 'dragao':
-                desenharDragao(tamanho, cor);
-                break;
-            case 'flor':
-                desenharFlor(tamanho, cor);
-                break;
-            case 'escudo':
-                desenharEscudo(tamanho, cor);
-                break;
-            default:
-                desenharEstrela(tamanho, cor);
+    // EVENTO PARA ATUALIZAR BANDEIRA
+    btnDesenhar.addEventListener('click', desenharBandeira);
+
+    // EVENTO PARA SALVAR BANDEIRA
+    btnSalvar.addEventListener('click', function() {
+        try {
+            const link = document.createElement('a');
+            link.download = `minha-bandeira-${Date.now()}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            alert('Bandeira salva com sucesso! 🎉');
+        } catch (error) {
+            alert('Erro ao salvar a bandeira. Tente novamente!');
         }
-    }
+    });
 
-    // DESENHAR ESTRELA PADRÃO
-    function desenharEstrela(tamanho, cor) {
-        ctx.fillStyle = cor;
-        ctx.beginPath();
-        for (let i = 0; i < 5; i++) {
-            ctx.lineTo(tamanho, 0);
-            ctx.rotate(Math.PI / 5);
-            ctx.lineTo(tamanho / 2, 0);
-            ctx.rotate(Math.PI / 5);
-        }
-        ctx.fill();
-    }
-
-    // DESENHAR CRUZ
-    function desenharCruz(tamanho, cor) {
-        ctx.fillStyle = cor;
-        ctx.fillRect(canvas.width/2 - tamanho/2, canvas.height/2 - tamanho/6, tamanho, tamanho/3);
-        ctx.fillRect(canvas.width/2 - tamanho/6, canvas.height/2 - tamanho/2, tamanho/3, tamanho);
-    }
-
-    // DESENHAR SOL
-    function desenharSol(tamanho, cor) {
-        ctx.fillStyle = cor;
-        ctx.beginPath();
-        ctx.arc(canvas.width/2, canvas.height/2, tamanho/2, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Raios do sol
-        for (let i = 0; i < 12; i++) {
-            ctx.save();
-            ctx.translate(canvas.width/2, canvas.height/2);
-            ctx.rotate(i * Math.PI / 6);
-            ctx.fillRect(0, -tamanho/2, tamanho/4, tamanho/2);
-            ctx.restore();
-        }
-    }
-
-    // DESENHAR LUA
-    function desenharLua(tamanho, cor) {
-        ctx.fillStyle = cor;
-        ctx.beginPath();
-        ctx.arc(canvas.width/2, canvas.height/2, tamanho/2, 0.2 * Math.PI, 1.8 * Math.PI);
-        ctx.lineTo(canvas.width/2, canvas.height/2 - tamanho/4);
-        ctx.fill();
-    }
-
-    // DESENHAR ÁGUIA
-    function desenharAguia(tamanho, cor) {
-        ctx.fillStyle = cor;
-        ctx.beginPath();
-        ctx.moveTo(canvas.width/2 - tamanho, canvas.height/2);
-        ctx.lineTo(canvas.width/2, canvas.height/2 - tamanho);
-        ctx.lineTo(canvas.width/2 + tamanho, canvas.height/2);
-        ctx.lineTo(canvas.width/2, canvas.height/2 + tamanho/2);
-        ctx.fill();
-
-        // Cabeça da águia
-        ctx.beginPath();
-        ctx.arc(canvas.width/2 + tamanho/2, canvas.height/2 - tamanho/2, tamanho/4, 0, Math.PI * 2);
-        ctx.fill();
-    }
-
-    // DESENHAR DRAGÃO
-    function desenharDragao(tamanho, cor) {
-        ctx.fillStyle = cor;
-        ctx.beginPath();
-        ctx.moveTo(canvas.width/2 - tamanho, canvas.height/2);
-        ctx.bezierCurveTo(canvas.width/2 - tamanho/2, canvas.height/2 - tamanho/2, 
-                          canvas.width/2 + tamanho/2, canvas.height/2 - tamanho/2, 
-                          canvas.width/2 + tamanho, canvas.height/2);
-        ctx.bezierCurveTo(canvas.width/2 + tamanho/2, canvas.height/2 + tamanho/2, 
-                          canvas.width/2 - tamanho/2, canvas.height/2 + tamanho/2, 
-                          canvas.width/2 - tamanho, canvas.height/2);
-        ctx.fill();
-
-        // Olho do dragão
-        ctx.fillStyle = '#ffffff';
-        ctx.beginPath();
-        ctx.arc(canvas.width/2 - tamanho/4, canvas.height/2 - tamanho/4, tamanho/8, 0, Math.PI * 2);
-        ctx.fill();
-    }
-
-    // DESENHAR FLOR
-    function desenharFlor(tamanho, cor) {
-        ctx.fillStyle = cor;
-        for (let i = 0; i < 8; i++) {
-            ctx.save();
-            ctx.translate(canvas.width/2, canvas.height/2);
-            ctx.rotate(i * Math.PI / 4);
-            ctx.beginPath();
-            ctx.moveTo(0, 0);
-            ctx.bezierCurveTo(tamanho/4, -tamanho/4, tamanho/2, 0, tamanho/4, tamanho/4);
-            ctx.fill();
-            ctx.restore();
-        }
-    }
-
-    // DESENHAR ESCUDO
-    function desenharEscudo(tamanho, cor) {
-        ctx.fillStyle = cor;
-        ctx.beginPath();
-        ctx.moveTo(canvas.width/2, canvas.height/2 - tamanho/2);
-        ctx.lineTo(canvas.width/2 + tamanho/2, canvas.height/2);
-        ctx.lineTo(canvas.width/2, canvas.height/2 + tamanho/2);
-        ctx.lineTo(canvas.width/2 - taman
+    // EVENTO PARA UPLOAD DE IMAGEM
+    uploadBandeira.addEventListener('change', function(e) {
+        const arquivo = e.target.files[0];
+        if (arquivo) {
+            arquivoSelecionado.textContent = `Arquivo: ${arquivo.name}`;
+            const leitor = new FileReader();
+            leitor.onload = function(event) {
+                previewImagem.src = event.target.result;
+            }
+            leitor.readAsDataURL(
