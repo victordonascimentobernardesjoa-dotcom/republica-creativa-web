@@ -107,7 +107,6 @@
                 <div class="bandeira-card">
                     <h3>Criar Bandeira Personalizada</h3>
                     
-                    <!-- CANVAS CORRIGIDO -->
                     <div class="canvas-container">
                         <canvas id="canvas-bandeira" width="300" height="200" style="border: 2px solid #1a4a7a; display: block; margin: 0 auto;"></canvas>
                         <p class="legenda">Visualização da Bandeira</p>
@@ -142,6 +141,8 @@
                                 <option value="coração-dourado">Coração Dourado</option>
                                 <option value="roda-dharma">Roda Dharma</option>
                                 <option value="livro-sagrado">Livro Sagrado</option>
+                                <option value="coroa-real">Coroa Real</option>
+                                <option value="espadas-cruzadas">Espadas Cruzadas</option>
                             </select>
                         </div>
 
@@ -165,6 +166,7 @@
                                 <option value="grade-2x2">Grade 2x2</option>
                                 <option value="grade-3x3">Grade 3x3</option>
                                 <option value="cantos">Nos 4 Cantos</option>
+                                <option value="faixa-horizontal">Faixa Horizontal Central</option>
                             </select>
                         </div>
 
@@ -200,43 +202,52 @@
         </div>
     </section>
 
+    <!-- SEÇÃO PROJETOS COM SUAS BANDEIRAS -->
     <section id="projetos" class="secao-padrao fundo-claro">
         <div class="container">
             <h2>Projetos Exemplos</h2>
             <div class="projetos-grid">
+                <!-- IMPÉRIO DE VALDRIS -->
                 <div class="projeto-card">
                     <div class="projeto-imagem">
-                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Valdris" alt="Bandeira do Império de Valdris" style="max-width: 100%; height: auto;">
+                        <!-- Bandeira com coroa que você criou -->
+                        <img src="https://i.imgur.com/9Z7X8yY.png" alt="Bandeira do Império de Valdris" style="max-width: 100%; height: auto;">
                     </div>
                     <h3>Império de Valdris</h3>
                     <p class="ideologia">Ideologia: Monarquia Constitucional</p>
                     <p class="descricao">
-                        Um império com mais de 500 anos de história, conhecido por sua arquitetura medieval 
-                        e sistema de nobreza organizado.
+                        Um império com mais de 500 anos de história, conhecido por sua arquitetura medieval, 
+                        sistema de nobreza organizado e forças armadas bem treinadas — representadas pelas espadas cruzadas.
                     </p>
                     <button class="btn-secundario">Ver Detalhes</button>
                 </div>
 
+                <!-- REPÚBLICA SOCIALISTA DE AURORIA -->
                 <div class="projeto-card">
                     <div class="projeto-imagem">
-                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Auroria" alt="Bandeira da República Socialista de Auroria" style="max-width: 100%; height: auto;">
+                        <!-- Bandeira vermelha com estrela que você criou -->
+                        <img src="https://i.imgur.com/5KjX2bN.png" alt="Bandeira da República Socialista de Auroria" style="max-width: 100%; height: auto;">
                     </div>
                     <h3>República Socialista de Auroria</h3>
                     <p class="ideologia">Ideologia: Social-Democracia</p>
                     <p class="descricao">
-                        Uma nação pioneira em energia limpa, com foco em igualdade de gênero e direitos humanos.
+                        Uma nação pioneira em energia limpa, com foco em igualdade de gênero e direitos humanos. 
+                        A estrela simboliza a esperança e o progresso para um futuro justo para todos.
                     </p>
                     <button class="btn-secundario">Ver Detalhes</button>
                 </div>
 
+                <!-- ESTADO DE KHAROS -->
                 <div class="projeto-card">
                     <div class="projeto-imagem">
-                        <img src="https://via.placeholder.com/300x200?text=Bandeira+Kharos" alt="Bandeira do Estado de Kharos" style="max-width: 100%; height: auto;">
+                        <!-- Bandeira com balança que você criou -->
+                        <img src="https://i.imgur.com/2PqZtLb.png" alt="Bandeira do Estado de Kharos" style="max-width: 100%; height: auto;">
                     </div>
                     <h3>Estado de Kharos</h3>
                     <p class="ideologia">Ideologia: Technocracia Universal</p>
                     <p class="descricao">
-                        Uma nação governada por inteligências artificiais e cientistas, com tecnologia avançada.
+                        Uma nação governada por inteligências artificiais e cientistas, com tecnologia avançada. 
+                        A balança representa a justiça baseada em dados e a faixa diagonal simboliza a conexão global.
                     </p>
                     <button class="btn-secundario">Ver Detalhes</button>
                 </div>
@@ -276,18 +287,4 @@
                             <option value="teocracia">Teocracia</option>
                             <option value="social-democracia">Social-Democracia</option>
                             <option value="technocracia-universal">Technocracia Universal</option>
-                            <option value="ecologismo-profundo">Ecologismo Profundo</option>
-                            <option value="comunhao-tribal">Comunhão Tribal Moderna</option>
-                            <option value="utopianismo-racional">Utopianismo Racional</option>
-                            <option value="propria">Criar Minha Própria Ideologia</option>
-                        </select>
-                    </div>
-
-                    <div id="form-ideologia-propria" style="display: none; width: 100%;">
-                        <label>Descreva Sua Ideologia *</label>
-                        <textarea rows="4" placeholder="Explique os princípios, valores e funcionamento da sua ideologia..."></textarea>
-                    </div>
-
-                    <div class="form-item" style="width: 100%;">
-                        <label>Bandeira da Nação *</label>
-                        <p>Escolha entre criar acima ou fazer
+                            <option value="ecologismo-profundo">Ecologismo Profundo
